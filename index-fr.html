@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Route of the Dunes — Voyages Sahariens depuis Marrakech et Fès</title>
+<meta name="description" content="Circuits privés et partagés dans le désert, depuis Marrakech et Fès jusqu'à Erg Chebbi — itinéraires de 3 et 5 jours, camps à plusieurs niveaux, balade à chameau et options quad/buggy.">
+<meta property="og:title" content="Route of the Dunes — Voyages Sahariens depuis Marrakech et Fès">
+<meta property="og:description" content="Circuits privés et partagés dans le désert, depuis Marrakech et Fès jusqu'à Erg Chebbi.">
+<meta property="og:type" content="website">
+<link rel="alternate" hreflang="en" href="index.html">
+<link rel="alternate" hreflang="fr" href="index-fr.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23182338'/%3E%3Cpath d='M0 22 C6 16 12 24 18 18 C24 13 28 20 32 17 L32 32 L0 32 Z' fill='%23c6883a'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TouristTrip",
+      "name": "Boucle Marrakech ⇄ Merzouga",
+      "description": "Circuit de 3 jours et 2 nuits, privé ou partagé, de Marrakech à Erg Chebbi via Aït Ben Haddou, Ouarzazate, la vallée du Dadès et les gorges du Todra.",
+      "touristType": ["Famille", "Couples", "Voyageurs seuls", "Groupes"],
+      "offers": { "@type": "Offer", "priceCurrency": "EUR", "price": "120", "description": "À partir de, par personne, circuit en groupe partagé" }
+    },
+    {
+      "@type": "TouristTrip",
+      "name": "Fès à Marrakech via le Sahara",
+      "description": "Traversée d'un sens, 5 jours et 4 nuits, de Fès à Marrakech via Ifrane, la forêt de cèdres d'Azrou, la vallée du Ziz, Erg Chebbi, les gorges du Todra et la vallée du Dadès.",
+      "touristType": ["Famille", "Couples", "Voyageurs seuls", "Groupes"],
+      "offers": { "@type": "Offer", "priceCurrency": "EUR", "price": "280", "description": "À partir de, par personne, circuit en groupe partagé" }
+    }
+  ]
+}
+</script>
+<style>
+  :root{
+    --night:#182338;
+    --night-2:#233252;
+    --ochre:#c6883a;
+    --ochre-2:#e0a75a;
+    --rust:#9c4a2e;
+    --sand:#ece1c6;
+    --cream:#f8f3e6;
+    --ink:#211a12;
+    --line: rgba(248,243,230,0.18);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Work Sans', sans-serif;
+    background:var(--cream);
+    color:var(--ink);
+    line-height:1.55;
+  }
+  h1,h2,h3,.display{
+    font-family:'Spectral', serif;
+    font-weight:500;
+    letter-spacing:-0.01em;
+  }
+  a{color:inherit;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:1120px; margin:0 auto; padding:0 28px;}
+  header{
+    position:sticky; top:0; z-index:50;
+    background:var(--night);
+    color:var(--cream);
+    border-bottom:1px solid var(--line);
+  }
+  .navbar{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px 28px;
+    max-width:1120px; margin:0 auto;
+  }
+  .brand{
+    font-family:'Spectral', serif;
+    font-size:1.3rem;
+    display:flex; align-items:baseline; gap:8px;
+  }
+  .brand .dot{color:var(--ochre-2);}
+  nav ul{
+    display:flex; gap:32px; list-style:none;
+    font-size:0.94rem;
+  }
+  nav a{text-decoration:none; opacity:0.86; transition:opacity .2s;}
+  nav a:hover{opacity:1;}
+  .navcta{
+    border:1px solid var(--ochre-2);
+    padding:9px 18px;
+    font-size:0.88rem;
+    border-radius:2px;
+    text-decoration:none;
+    white-space:nowrap;
+  }
+  .lang-switch{ font-size:0.82rem; opacity:0.75; text-decoration:none; border:1px solid rgba(248,243,230,0.3); border-radius:2px; padding:6px 10px; }
+  .navmenu{display:flex; align-items:center; gap:24px;}
+  .hero{
+    position:relative;
+    background:linear-gradient(180deg, var(--night) 0%, var(--night-2) 60%, #2c3f63 100%);
+    color:var(--cream);
+    overflow:hidden;
+    padding-bottom:0;
+  }
+  .hero-inner{
+    max-width:1120px; margin:0 auto; padding:88px 28px 0;
+    display:grid; grid-template-columns: 1.05fr 0.95fr; gap:40px; align-items:end;
+  }
+  .hero-kicker{
+    font-size:0.92rem; color:var(--ochre-2); margin-bottom:18px;
+  }
+  .hero h1{
+    font-size:clamp(2.2rem, 4.6vw, 3.4rem);
+    line-height:1.1;
+    max-width:16ch;
+  }
+  .hero p.lede{
+    margin-top:22px; font-size:1.08rem; max-width:46ch; color:rgba(248,243,230,0.86);
+  }
+  .hero-actions{margin-top:34px; display:flex; gap:16px; flex-wrap:wrap;}
+  .btn{
+    display:inline-block;
+    padding:13px 26px;
+    font-size:0.95rem;
+    text-decoration:none;
+    border-radius:2px;
+    transition:transform .15s ease;
+  }
+  .btn:hover{transform:translateY(-1px);}
+  .btn-primary{background:var(--ochre-2); color:var(--night); font-weight:600;}
+  .btn-ghost{border:1px solid rgba(248,243,230,0.4); color:var(--cream);}
+  .hero-figures{
+    display:grid; gap:14px; padding-bottom:28px;
+  }
+  .fig{
+    border-left:2px solid var(--ochre-2);
+    padding-left:16px;
+  }
+  .fig .num{font-family:'Spectral', serif; font-size:1.6rem; display:block;}
+  .fig .lab{font-size:0.82rem; color:rgba(248,243,230,0.65);}
+  .dunes{
+    width:100%; height:auto; display:block; margin-top:56px;
+  }
+  .section{padding:84px 0;}
+  .section-head{
+    display:grid; grid-template-columns: 1fr 1fr; gap:40px; align-items:end;
+    margin-bottom:52px;
+  }
+  .section-head h2{font-size:clamp(1.7rem,3vw,2.3rem); max-width:16ch;}
+  .section-head .sub{color:#5a5142; font-size:1.02rem; align-self:end;}
+  .tag{
+    font-size:0.86rem; color:var(--rust); margin-bottom:12px; display:block;
+  }
+  .routes{background:var(--cream);}
+  .route-grid{
+    display:grid; grid-template-columns: repeat(2, 1fr); gap:26px;
+  }
+  .route-card{
+    background:#fff;
+    border:1px solid #e4d8b9;
+    padding:30px 28px 28px;
+    position:relative;
+  }
+  .route-card:nth-child(2){margin-top:34px;}
+  .route-days{
+    display:flex; align-items:baseline; gap:10px; margin-bottom:6px;
+  }
+  .route-days .n{font-family:'Spectral', serif; font-size:2.1rem; color:var(--rust);}
+  .route-days .u{font-size:0.85rem; color:#7a705c;}
+  .route-card h3{font-size:1.3rem; margin-bottom:10px;}
+  .route-card p{color:#4f473a; font-size:0.96rem; margin-bottom:18px;}
+  .route-stops{
+    display:flex; flex-wrap:wrap; gap:6px 0; font-size:0.86rem; color:#7a705c; margin-bottom:20px;
+  }
+  .route-stops span:not(:last-child)::after{content:" → "; color:var(--ochre); padding:0 2px;}
+  .route-link{
+    font-size:0.9rem; text-decoration:none; color:var(--rust); border-bottom:1px solid var(--rust); padding-bottom:2px;
+  }
+  .itinerary{background:var(--night); color:var(--cream);}
+  .itinerary .section-head .sub{color:rgba(248,243,230,0.6);}
+  .itinerary .tag{color:var(--ochre-2);}
+  .timeline{
+    display:grid; gap:0;
+    border-top:1px solid var(--line);
+  }
+  .day-row{
+    display:grid; grid-template-columns: 90px 1fr 1fr;
+    gap:28px;
+    padding:30px 0;
+    border-bottom:1px solid var(--line);
+    align-items:start;
+  }
+  .day-row .day-marker{
+    font-family:'Spectral', serif; font-size:1rem; color:var(--ochre-2);
+  }
+  .day-row .day-marker .lbl{display:block; font-size:0.72rem; color:rgba(248,243,230,0.5); font-family:'Work Sans',sans-serif; margin-top:4px;}
+  .day-row h4{font-size:1.12rem; font-weight:500; margin-bottom:8px;}
+  .day-row p{font-size:0.94rem; color:rgba(248,243,230,0.78);}
+  .day-meta{font-size:0.82rem; color:rgba(248,243,230,0.55); align-self:start;}
+  .day-meta div{margin-bottom:6px;}
+  .pricing{background:var(--sand);}
+  .price-route-label{
+    font-family:'Spectral', serif; font-size:1.15rem; margin-bottom:22px; color:var(--rust);
+  }
+  .price-route-label:not(:first-of-type){margin-top:52px;}
+  .price-grid{
+    display:grid; grid-template-columns: repeat(3,1fr); gap:22px;
+  }
+  .price-card{
+    background:#fff; border:1px solid #d8c99e; padding:28px 26px;
+    display:flex; flex-direction:column;
+  }
+  .price-card.featured{
+    border:1px solid var(--rust); position:relative;
+  }
+  .price-card .featured-flag{
+    position:absolute; top:-12px; left:26px;
+    background:var(--rust); color:#fff; font-size:0.72rem;
+    padding:4px 10px;
+  }
+  .price-tier{font-size:0.86rem; color:#7a705c; margin-bottom:10px;}
+  .price-amount{
+    font-family:'Spectral', serif; font-size:2.1rem; color:var(--ink); margin-bottom:2px;
+  }
+  .price-amount sup{font-size:0.95rem; color:#7a705c; font-weight:400;}
+  .price-unit{font-size:0.82rem; color:#7a705c; margin-bottom:18px;}
+  .price-card ul{list-style:none; font-size:0.9rem; color:#4f473a; display:grid; gap:9px; margin-bottom:8px;}
+  .price-card li{padding-left:16px; position:relative;}
+  .price-card li::before{content:"—"; position:absolute; left:0; color:var(--ochre);}
+  .price-note{font-size:0.84rem; color:#7a705c; margin-top:36px; max-width:60ch;}
+  .currency-note{font-size:0.82rem; color:#8a8067; margin-top:14px;}
+  .activities{background:var(--night); color:var(--cream);}
+  .activities .section-head .sub{color:rgba(248,243,230,0.6);}
+  .activities .tag{color:var(--ochre-2);}
+  .act-grid{display:grid; grid-template-columns: repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line);}
+  .act-card{background:var(--night); padding:30px 26px;}
+  .act-time{
+    display:inline-flex; gap:8px; font-size:0.76rem; margin-bottom:16px;
+  }
+  .act-time span{
+    border:1px solid rgba(248,243,230,0.35); padding:3px 9px; color:rgba(248,243,230,0.75);
+  }
+  .act-card h3{font-size:1.15rem; margin-bottom:10px; color:var(--cream);}
+  .act-card p{font-size:0.92rem; color:rgba(248,243,230,0.72); margin-bottom:14px;}
+  .act-price{font-size:0.84rem; color:var(--ochre-2);}
+  .about{background:#fff;}
+  .about-grid{display:grid; grid-template-columns: 0.9fr 1.1fr; gap:56px; align-items:start;}
+  .about-figs{display:grid; gap:18px; margin-top:26px;}
+  .about-figs .fig2{border-left:2px solid var(--rust); padding-left:14px;}
+  .about-figs .fig2 .num{font-family:'Spectral', serif; font-size:1.5rem; display:block;}
+  .about-figs .fig2 .lab{font-size:0.82rem; color:#7a705c;}
+  .about-body p{color:#4f473a; margin-bottom:16px; max-width:60ch;}
+  .testimonials{background:var(--sand);}
+  .testi-grid{display:grid; grid-template-columns: repeat(3,1fr); gap:24px;}
+  .testi-card{background:#fff; border:1px solid #d8c99e; padding:26px 24px;}
+  .testi-card p{font-size:0.96rem; color:#3a3226; margin-bottom:16px; font-style:italic;}
+  .testi-name{font-size:0.86rem; color:var(--rust);}
+  .faq-sec{background:#fff;}
+  .faq-list{border-top:1px solid #d8c99e;}
+  .faq-item{border-bottom:1px solid #d8c99e; padding:22px 0;}
+  .faq-item h3{font-size:1.05rem; font-family:'Work Sans',sans-serif; font-weight:600; margin-bottom:8px;}
+  .faq-item p{font-size:0.94rem; color:#4f473a; max-width:66ch;}
+  .blog{background:#fff;}
+  .blog-grid{
+    display:grid; grid-template-columns: repeat(3,1fr); gap:24px;
+  }
+  .blog-card{
+    border-top:2px solid var(--ochre);
+    padding-top:18px;
+  }
+  .blog-cat{font-size:0.78rem; color:var(--rust); margin-bottom:10px; display:block;}
+  .blog-card h3{font-size:1.12rem; margin-bottom:10px; line-height:1.3;}
+  .blog-card p{font-size:0.9rem; color:#5a5142; margin-bottom:14px;}
+  .blog-link{font-size:0.86rem; color:var(--ink); text-decoration:none; border-bottom:1px solid var(--ink); padding-bottom:2px;}
+  .blog-note{font-size:0.78rem; color:#a89b7c; display:block; margin-top:4px;}
+  .experience{background:var(--sand);}
+  .exp-grid{
+    display:grid; grid-template-columns: repeat(4,1fr); gap:1px;
+    background:#d8c99e;
+    border:1px solid #d8c99e;
+  }
+  .exp-card{
+    background:var(--sand);
+    padding:34px 24px;
+  }
+  .exp-card .glyph{
+    width:34px; height:34px; margin-bottom:18px;
+    stroke:var(--rust); fill:none; stroke-width:1.4;
+  }
+  .exp-card h4{font-size:1.02rem; font-weight:600; margin-bottom:8px; font-family:'Work Sans', sans-serif;}
+  .exp-card p{font-size:0.88rem; color:#5a5142;}
+  .inquiry{background:#fff;}
+  .inquiry-grid{
+    display:grid; grid-template-columns: 0.9fr 1.1fr; gap:56px;
+  }
+  .inquiry-note{color:#4f473a; font-size:1rem; margin-top:18px;}
+  .inquiry-note strong{color:var(--rust);}
+  form{display:grid; gap:16px;}
+  .row2{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+  label{font-size:0.82rem; color:#5a5142; display:block; margin-bottom:6px;}
+  input, select, textarea{
+    width:100%; padding:11px 12px;
+    border:1px solid #d8c99e; background:var(--cream);
+    font-family:'Work Sans', sans-serif; font-size:0.94rem;
+    color:var(--ink);
+  }
+  textarea{min-height:90px; resize:vertical;}
+  .submit-btn{
+    background:var(--rust); color:#fff; border:none;
+    padding:14px 26px; font-size:0.95rem; cursor:pointer; width:fit-content;
+    font-family:'Work Sans', sans-serif; font-weight:600;
+  }
+  footer{
+    background:var(--night); color:rgba(248,243,230,0.7);
+    padding:52px 0 28px;
+    font-size:0.88rem;
+  }
+  .foot-grid{display:grid; grid-template-columns: 1.3fr 1fr 1fr; gap:40px; margin-bottom:36px;}
+  footer h5{color:var(--cream); font-family:'Spectral', serif; font-size:1.1rem; margin-bottom:14px; font-weight:500;}
+  footer ul{list-style:none;}
+  footer li{margin-bottom:8px;}
+  footer a{text-decoration:none; opacity:0.85;}
+  .foot-bottom{border-top:1px solid var(--line); padding-top:20px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; font-size:0.8rem;}
+  @media (max-width: 860px){
+    .hero-inner{grid-template-columns:1fr;}
+    .hero-figures{grid-template-columns:repeat(3,1fr); display:grid; padding-bottom:36px;}
+    .section-head{grid-template-columns:1fr;}
+    .route-grid{grid-template-columns:1fr;}
+    .route-card:nth-child(2){margin-top:0;}
+    .day-row{grid-template-columns:60px 1fr; }
+    .day-meta{grid-column:2; margin-top:6px;}
+    .exp-grid{grid-template-columns:1fr 1fr;}
+    .price-grid{grid-template-columns:1fr;}
+    .price-route-label:not(:first-of-type){margin-top:38px;}
+    .blog-grid{grid-template-columns:1fr;}
+    .act-grid{grid-template-columns:1fr;}
+    .about-grid{grid-template-columns:1fr;}
+    .testi-grid{grid-template-columns:1fr;}
+    .inquiry-grid{grid-template-columns:1fr;}
+    .row2{grid-template-columns:1fr;}
+    nav ul{display:none;}
+    .foot-grid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="navbar">
+    <div class="brand">Route of the <span class="dot">Dunes</span></div>
+    <div class="navmenu">
+      <nav>
+        <ul>
+          <li><a href="#routes">Circuits</a></li>
+          <li><a href="#itinerary">Jour par jour</a></li>
+          <li><a href="#activities">Activités</a></li>
+          <li><a href="#pricing">Tarifs</a></li>
+          <li><a href="#journal">Journal</a></li>
+          <li><a href="#experience">Pourquoi nous</a></li>
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#inquiry">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="lang-switch" href="index.html">EN</a>
+      <a class="navcta" href="#inquiry">Planifier mon voyage</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <span class="hero-kicker">Marrakech · Ouarzazate · Dadès · Merzouga · Fès</span>
+      <h1>La route du sud, de l'Atlas à la dernière dune avant le Sahara.</h1>
+      <p class="lede">Des circuits privés et guidés, à taille humaine, à travers kasbahs, gorges et vallées de palmiers — jusqu'à l'endroit où le sable rencontre les étoiles à Erg Chebbi.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#routes">Voir les circuits</a>
+        <a class="btn btn-ghost" href="#inquiry">Poser une question</a>
+      </div>
+    </div>
+    <div class="hero-figures">
+      <div class="fig"><span class="num">2</span><span class="lab">circuits principaux, de 3 à 5 jours</span></div>
+      <div class="fig"><span class="num">1</span><span class="lab">camp dans le désert, sous Erg Chebbi</span></div>
+      <div class="fig"><span class="num">100%</span><span class="lab">privé, à votre rythme</span></div>
+    </div>
+  </div>
+  <svg class="dunes" viewBox="0 0 1200 180" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,120 C150,70 300,150 480,100 C650,55 800,130 1000,90 C1080,75 1150,95 1200,80 L1200,180 L0,180 Z" fill="#2c3f63"/>
+    <path d="M0,150 C200,110 380,170 600,130 C800,95 950,160 1200,120 L1200,180 L0,180 Z" fill="#c6883a" opacity="0.9"/>
+    <path d="M0,170 C250,140 500,175 750,150 C950,130 1080,165 1200,150 L1200,180 L0,180 Z" fill="#ece1c6"/>
+  </svg>
+</section>
+
+<section class="section routes" id="routes">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="tag">Deux points de départ</span>
+        <h2>Choisissez où commence votre route.</h2>
+      </div>
+      <p class="sub">Ce sont les deux circuits les plus demandés — une boucle depuis Marrakech, ou une traversée entre Fès et Marrakech. Chaque circuit est ajusté une fois vos dates et la taille de votre groupe connues.</p>
+    </div>
+    <div class="route-grid">
+      <div class="route-card">
+        <div class="route-days"><span class="n">3</span><span class="u">jours / 2 nuits</span></div>
+        <h3>Boucle Marrakech ⇄ Merzouga</h3>
+        <div class="route-stops">
+          <span>Marrakech</span><span>Aït Ben Haddou</span><span>Ouarzazate</span><span>Vallée du Dadès</span><span>Gorges du Todra</span><span>Merzouga</span>
+        </div>
+        <p>Le grand classique du Sahara, celui que réservent d'abord la plupart des voyageurs : le col du Haut Atlas, la kasbah UNESCO d'Aït Ben Haddou, une marche dans les gorges du Todra, une balade à chameau au coucher du soleil vers Erg Chebbi, et une nuit sous tente avant de revenir à Marrakech.</p>
+        <a class="route-link" href="#itinerary">Voir le programme jour par jour</a>
+      </div>
+      <div class="route-card">
+        <div class="route-days"><span class="n">5</span><span class="u">jours / 4 nuits</span></div>
+        <h3>Fès → Marrakech via le Sahara</h3>
+        <div class="route-stops">
+          <span>Fès</span><span>Ifrane</span><span>Forêt de cèdres d'Azrou</span><span>Vallée du Ziz</span><span>Merzouga</span><span>Todra</span><span>Dadès</span><span>Marrakech</span>
+        </div>
+        <p>Une traversée du pays dans un sens, à un rythme plus tranquille : la "Suisse marocaine" à Ifrane, les macaques de Barbarie dans la forêt de cèdres d'Azrou, deux nuits aux dunes, puis un retour plus posé par Todra et Dadès jusqu'à Marrakech.</p>
+        <a class="route-link" href="#itinerary">Voir le programme jour par jour</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section itinerary" id="itinerary">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="tag">Boucle Marrakech ⇄ Merzouga — exemple</span>
+        <h2>À quoi ressemblent vraiment ces trois jours.</h2>
+      </div>
+      <p class="sub">C'est le déroulé que suivent la plupart des circuits Marrakech–Merzouga — ajustez les arrêts, horaires et repas selon votre propre circuit.</p>
+    </div>
+    <div class="timeline">
+      <div class="day-row">
+        <div class="day-marker">01<span class="lbl">Jour</span></div>
+        <div>
+          <h4>Marrakech → Aït Ben Haddou → Ouarzazate → Vallée du Dadès</h4>
+          <p>Traversée du Haut Atlas par le col du Tizi n'Tichka, arrêt à la kasbah UNESCO d'Aït Ben Haddou, passage devant les studios de cinéma d'Ouarzazate, arrivée dans la vallée du Dadès en soirée.</p>
+        </div>
+        <div class="day-meta"><div>~7h de route</div><div>Déjeuner, dîner</div></div>
+      </div>
+      <div class="day-row">
+        <div class="day-marker">02<span class="lbl">Jour</span></div>
+        <div>
+          <h4>Dadès → Gorges du Todra → Erg Chebbi</h4>
+          <p>Marche matinale dans les gorges du Todra entre ses hautes parois, puis route vers Merzouga pour une balade à chameau au coucher du soleil dans les dunes, dîner et nuit au camp du désert.</p>
+        </div>
+        <div class="day-meta"><div>~5h de route</div><div>Petit-déjeuner, dîner</div></div>
+      </div>
+      <div class="day-row">
+        <div class="day-marker">03<span class="lbl">Jour</span></div>
+        <div>
+          <h4>Lever du soleil → Sandboard → Merzouga → Marrakech</h4>
+          <p>Lever du soleil depuis le camp, essai du sandboard sur les dunes, puis retour vers Marrakech avec un arrêt à Ouarzazate en chemin.</p>
+        </div>
+        <div class="day-meta"><div>~7h de route</div><div>Petit-déjeuner</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section activities" id="activities">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="tag">Aux dunes</span>
+        <h2>Chameau, quad ou buggy — au lever ou au coucher du soleil.</h2>
+      </div>
+      <p class="sub">Quelle que soit la façon dont vous préférez traverser le sable, choisissez l'activité et le moment de la journée au moment de réserver — rien à décider avant d'être prêt.</p>
+    </div>
+    <div class="act-grid">
+      <div class="act-card">
+        <div class="act-time"><span>Lever</span><span>Coucher</span></div>
+        <h3>Balade à dos de chameau</h3>
+        <p>La façon classique d'arriver — une balade tranquille avec votre guide, incluse dans chaque circuit.</p>
+        <div class="act-price">Inclus dans chaque circuit</div>
+      </div>
+      <div class="act-card">
+        <div class="act-time"><span>Lever</span><span>Coucher</span></div>
+        <h3>Quad</h3>
+        <p>Traversez l'erg vous-même, à votre rythme — une façon plus active d'atteindre les mêmes dunes.</p>
+        <div class="act-price">Option, à partir de 35€</div>
+      </div>
+      <div class="act-card">
+        <div class="act-time"><span>Lever</span><span>Coucher</span></div>
+        <h3>Buggy des dunes</h3>
+        <p>Sessions en buggy, seul ou partagées, sur les plus hautes dunes — l'option la plus sportive, selon la météo et l'état des dunes.</p>
+        <div class="act-price">Option, à partir de 55€</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section pricing" id="pricing">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="tag">Ce que ça coûte</span>
+        <h2>Trois façons de faire le même circuit.</h2>
+      </div>
+      <p class="sub">Par personne, pour un petit groupe de 4 à 6 voyageurs. Voyageurs seuls et groupes plus larges reçoivent un devis ajusté — prix final confirmé une fois vos dates connues.</p>
+    </div>
+
+    <div class="price-route-label">Boucle Marrakech ⇄ Merzouga — 3 jours / 2 nuits</div>
+    <div class="price-grid">
+      <div class="price-card">
+        <div class="price-tier">Groupe partagé</div>
+        <div class="price-amount">120€<sup>/pers.</sup></div>
+        <div class="price-unit">à partir de, par personne</div>
+        <ul>
+          <li>Minibus partagé, jusqu'à 16 voyageurs</li>
+          <li>Camp standard, sanitaires partagés</li>
+          <li>Balade à chameau au coucher du soleil, 2 nuits en demi-pension</li>
+        </ul>
+      </div>
+      <div class="price-card featured">
+        <span class="featured-flag">Le plus réservé</span>
+        <div class="price-tier">Privé — Standard</div>
+        <div class="price-amount">175€<sup>/pers.</sup></div>
+        <div class="price-unit">à partir de, par personne</div>
+        <ul>
+          <li>4×4 privé avec chauffeur-guide</li>
+          <li>Camp standard ou deluxe</li>
+          <li>Arrêts et rythme entièrement flexibles</li>
+        </ul>
+      </div>
+      <div class="price-card">
+        <div class="price-tier">Privé — Luxe</div>
+        <div class="price-amount">245€<sup>/pers.</sup></div>
+        <div class="price-unit">à partir de, par personne</div>
+        <ul>
+          <li>Véhicule privé, arrêts prioritaires</li>
+          <li>Tente de luxe avec salle de bain privée, douche chaude</li>
+          <li>Options sandboard et quad</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="price-route-label">Fès → Marrakech via le Sahara — 5 jours / 4 nuits</div>
+    <div class="price-grid">
+      <div class="price-card">
+        <div class="price-tier">Groupe partagé</div>
+        <div class="price-amount">280€<sup>/pers.</sup></div>
+        <div class="price-unit">à partir de, par personne</div>
+        <ul>
+          <li>Minibus partagé, jusqu'à 16 voyageurs</li>
+          <li>Camp standard, sanitaires partagés</li>
+          <li>2 nuits près des dunes, en demi-pension</li>
+        </ul>
+      </div>
+      <div class="price-card featured">
+        <span class="featured-flag">Le plus réservé</span>
+        <div class="price-tier">Privé — Standard</div>
+        <div class="price-amount">380€<sup>/pers.</sup></div>
+        <div class="price-unit">à partir de, par personne</div>
+        <ul>
+          <li>4×4 privé avec chauffeur-guide</li>
+          <li>Camp standard ou deluxe</li>
+          <li>Rythme plus tranquille, plus de temps dans les gorges</li>
+        </ul>
+      </div>
+      <div class="price-card">
+        <div class="price-tier">Privé — Luxe</div>
+        <div class="price-amount">520€<sup>/pers.</sup></div>
+        <div class="price-unit">à partir de, par personne</div>
+        <ul>
+          <li>Véhicule privé, arrêts sélectionnés</li>
+          <li>Tentes de luxe avec salle de bain tout au long du circuit</li>
+          <li>Options sandboard et quad</li>
+        </ul>
+      </div>
+    </div>
+    <p class="price-note">Les prix sont indicatifs, en ligne avec les tarifs habituels pour ce circuit — à remplacer par vos coûts réels une fois le carburant, les guides et l'hébergement chiffrés. Le prix par personne baisse avec la taille du groupe ; les voyageurs seuls paient un supplément individuel.</p>
+    <p class="currency-note">Prix affichés en euros, ou l'équivalent dans votre devise — renseignez-vous auprès de votre banque pour le taux actuel.</p>
+  </div>
+</section>
+
+<section class="section blog" id="journal">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="tag">Depuis la route</span>
+        <h2>Des notes pratiques, pas une brochure.</h2>
+      </div>
+      <p class="sub">Des réponses concrètes aux questions que se posent vraiment les voyageurs avant de réserver.</p>
+    </div>
+    <div class="blog-grid">
+      <div class="blog-card">
+        <span class="blog-cat">Activités</span>
+        <h3>Chameau, quad ou buggy — lever ou coucher du soleil ? Comment choisir</h3>
+        <p>Deux décisions, une traversée des dunes — comment chaque combinaison se ressent, et ce qu'elle coûte.</p>
+        <a class="blog-link" href="blog-camel-quad-buggy.html">Lire le guide</a><span class="blog-note">(en anglais)</span>
+      </div>
+      <div class="blog-card">
+        <span class="blog-cat">Organisation</span>
+        <h3>Circuit dans le désert sans balade à chameau : quelles sont vos options</h3>
+        <p>Pour les voyageurs qui préfèrent éviter le chameau — l'alternative en 4×4 jusqu'au camp, et comment la demander.</p>
+        <a class="blog-link" href="blog-no-camel-tour.html">Lire le guide</a><span class="blog-note">(en anglais)</span>
+      </div>
+      <div class="blog-card">
+        <span class="blog-cat">Familles</span>
+        <h3>Circuit dans le Sahara avec de jeunes enfants : est-ce faisable ?</h3>
+        <p>Chaleur, temps de route et rythme — un avis honnête sur emmener de jeunes enfants dans les dunes.</p>
+        <a class="blog-link" href="blog-young-kids.html">Lire le guide</a><span class="blog-note">(en anglais)</span>
+      </div>
+      <div class="blog-card">
+        <span class="blog-cat">Comparatif</span>
+        <h3>Erg Chebbi ou Erg Chigaga : quel désert choisir</h3>
+        <p>Distance, hauteur des dunes, affluence et coût — comparaison étape par étape.</p>
+        <a class="blog-link" href="blog-erg-chebbi-vs-chigaga.html">Lire le guide</a><span class="blog-note">(en anglais)</span>
+      </div>
+      <div class="blog-card">
+        <span class="blog-cat">Organisation</span>
+        <h3>Une nuit à Merzouga, est-ce suffisant ?</h3>
+        <p>Ce que vous gagnez — et ce que vous manquez — entre une et deux nuits aux dunes.</p>
+        <a class="blog-link" href="blog-one-night-enough-fr.html">Lire le guide</a>
+      </div>
+      <div class="blog-card">
+        <span class="blog-cat">Cuisine</span>
+        <h3>Repas végétariens et végétaliens au camp du désert</h3>
+        <p>Ce qui est vraiment au menu, et comment signaler vos besoins alimentaires avant votre arrivée.</p>
+        <a class="blog-link" href="blog-vegetarian-meals.html">Lire le guide</a><span class="blog-note">(en anglais)</span>
+      </div>
+      <div class="blog-card">
+        <span class="blog-cat">Photographie</span>
+        <h3>Meilleur moment pour photographier les étoiles au-dessus de Merzouga</h3>
+        <p>Réglages simples du téléphone, et où s'installer loin des lumières du camp.</p>
+        <a class="blog-link" href="blog-photograph-stars.html">Lire le guide</a><span class="blog-note">(en anglais)</span>
+      </div>
+      <div class="blog-card">
+        <span class="blog-cat">Comparatif</span>
+        <h3>Circuit privé ou partagé : lequel en vaut vraiment la peine ?</h3>
+        <p>Ce qui change vraiment — rythme, intimité, prix — entre les deux façons de réserver.</p>
+        <a class="blog-link" href="blog-private-vs-shared-fr.html">Lire le guide</a>
+      </div>
+      <div class="blog-card">
+        <span class="blog-cat">Comparatif</span>
+        <h3>3 jours ou 5 jours jusqu'à Merzouga : lequel réserver ?</h3>
+        <p>Ce que les deux jours supplémentaires ajoutent vraiment au circuit, étape par étape.</p>
+        <a class="blog-link" href="blog-3days-vs-5days.html">Lire le guide</a><span class="blog-note">(en anglais)</span>
+      </div>
+      <div class="blog-card">
+        <span class="blog-cat">Culture</span>
+        <h3>Que porter pour un circuit dans le désert au Maroc</h3>
+        <p>Une tenue pratique et respectueuse pour la route, le camp et les dunes.</p>
+        <a class="blog-link" href="blog-what-to-wear.html">Lire le guide</a><span class="blog-note">(en anglais)</span>
+      </div>
+      <div class="blog-card">
+        <span class="blog-cat">Sécurité</span>
+        <h3>Un circuit dans le Sahara est-il sûr pour les voyageuses seules ?</h3>
+        <p>Une réponse directe, et ce qu'il faut vérifier avant de réserver, avec n'importe quel opérateur.</p>
+        <a class="blog-link" href="blog-solo-female-safety-fr.html">Lire le guide</a>
+      </div>
+      <div class="blog-card">
+        <span class="blog-cat">Guide de route</span>
+        <h3>Aït Ben Haddou en une heure : que voir à la kasbah</h3>
+        <p>Profiter au maximum de votre arrêt au site UNESCO le plus connu du Maroc.</p>
+        <a class="blog-link" href="blog-ait-ben-haddou.html">Lire le guide</a><span class="blog-note">(en anglais)</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section experience" id="experience">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="tag">Pourquoi voyager avec nous</span>
+        <h2>Rythme local, circuits privés.</h2>
+      </div>
+      <p class="sub">Quatre choses à savoir avant de réserver.</p>
+    </div>
+  </div>
+  <div class="exp-grid">
+    <div class="exp-card">
+      <svg class="glyph" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3"/><path d="M4 21c0-4 3.5-7 8-7s8 3 8 7"/></svg>
+      <h4>Guides locaux</h4>
+      <p>Des chauffeurs et guides originaires des villes traversées, pas un centre d'appel.</p>
+    </div>
+    <div class="exp-card">
+      <svg class="glyph" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="1"/><path d="M8 7V4h8v3"/></svg>
+      <h4>Partagé ou privé</h4>
+      <p>Rejoignez un petit groupe pour réduire les coûts, ou réservez un véhicule privé pour une flexibilité totale.</p>
+    </div>
+    <div class="exp-card">
+      <svg class="glyph" viewBox="0 0 24 24"><path d="M12 3v6l4 2"/><circle cx="12" cy="12" r="9"/></svg>
+      <h4>Dates flexibles</h4>
+      <p>Les circuits démarrent n'importe quel jour et peuvent être allongés ou raccourcis sur demande.</p>
+    </div>
+    <div class="exp-card">
+      <svg class="glyph" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      <h4>Standard, deluxe ou luxe</h4>
+      <p>Même circuit, trois niveaux de camp — les tentes de luxe ont une salle de bain privée et une douche chaude.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section about" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div>
+        <span class="tag">Qui est derrière ce projet</span>
+        <h2>À compléter — remplacez par votre histoire réelle.</h2>
+        <div class="about-figs">
+          <div class="fig2"><span class="num">[X]</span><span class="lab">ans à parcourir le sud</span></div>
+          <div class="fig2"><span class="num">[X]</span><span class="lab">guides locaux agréés</span></div>
+        </div>
+      </div>
+      <div class="about-body">
+        <p>C'est ici que vous vous présentez, vous et ceux qui organisent les circuits avec vous — d'où vous venez, pourquoi le sud du Maroc en particulier, depuis combien de temps vous guidez ou conduisez sur cette route. Une ou deux phrases sur le parcours de vos guides (né à Merzouga, grandi dans une famille berbère du Dadès, ce genre de détail) inspire plus confiance que n'importe quel texte "À propos" générique.</p>
+        <p>Cette section compte plus qu'il n'y paraît — les voyageurs qui réservent un circuit privé, dans un pays qu'ils ne connaissent pas, veulent savoir qui conduit réellement le véhicule avant de verser un acompte. Une histoire courte, une vraie photo de vous ou de votre équipe, et un nom auquel se raccrocher font une vraie différence.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section testimonials" id="testimonials">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="tag">À compléter — pas encore de vrais avis</span>
+        <h2>Ce que disent les voyageurs.</h2>
+      </div>
+      <p class="sub">Remplacez ces trois avis par de vraies citations dès que possible — même 3 à 4 avis authentiques inspirent plus confiance qu'un paragraphe soigné à votre propre sujet.</p>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <p>« Citation à remplacer par un vrai avis, idéalement en citant le nom du guide ou du chauffeur. »</p>
+        <div class="testi-name">— Nom du voyageur, circuit effectué</div>
+      </div>
+      <div class="testi-card">
+        <p>« Citation à remplacer — un détail précis (le repas, l'histoire d'un guide, le ciel étoilé) semble plus authentique qu'un éloge général. »</p>
+        <div class="testi-name">— Nom du voyageur, circuit effectué</div>
+      </div>
+      <div class="testi-card">
+        <p>« Citation à remplacer — une fois une note Google ou TripAdvisor obtenue, ajoutez le badge ici, à côté des avis. »</p>
+        <div class="testi-name">— Nom du voyageur, circuit effectué</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section faq-sec" id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="tag">Avant de réserver</span>
+        <h2>Questions fréquentes.</h2>
+      </div>
+      <p class="sub">Les quatre questions que se posent presque tous les voyageurs avant de demander un devis.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3>Qu'est-ce qui est vraiment inclus dans le prix ?</h3>
+        <p>Le transport, le chauffeur-guide, l'hébergement à chaque étape, et les repas indiqués pour chaque circuit (généralement petit-déjeuner et dîner). Le déjeuner et les boissons ne sont généralement pas inclus, pour vous laisser le choix du lieu. Confirmez la liste exacte pour votre devis — remplacez cette réponse par vos inclusions réelles.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Quelle est votre politique d'annulation ?</h3>
+        <p>À compléter — indiquez ici votre politique réelle (par exemple, annulation gratuite jusqu'à X jours avant le départ, conditions d'acompte, délai de remboursement). C'est l'une des premières choses que vérifient les voyageurs prudents avant de réserver.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Le circuit est-il physiquement exigeant ?</h3>
+        <p>Principalement du transport en véhicule avec de courtes marches — la balade à chameau est douce, et les gorges du Todra se traversent sur un fond de canyon plat et facile. Adapté à la plupart des niveaux de forme physique ; signalez à l'avance à votre guide tout besoin de mobilité particulier dans votre groupe.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Quelle est la meilleure période pour partir ?</h3>
+        <p>Le printemps (mars–mai) et l'automne (septembre–novembre) sont les périodes les plus agréables, avec des journées chaudes et des nuits fraîches. L'été est chaud mais gérable grâce à un véhicule climatisé ; en hiver, les nuits aux dunes peuvent être froides — les camps fournissent des couvertures et des chauffages supplémentaires.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section inquiry" id="inquiry">
+  <div class="wrap">
+    <div class="inquiry-grid">
+      <div>
+        <span class="tag">Contactez-nous</span>
+        <h2>Donnez-nous vos dates, on construit le circuit.</h2>
+        <p class="inquiry-note">Chaque voyage est chiffré après un court échange — envoyez le formulaire, et attendez-vous à une réponse avec <strong>les dates et une fourchette de prix</strong> sous 24h.</p>
+      </div>
+      <form id="inquiryForm">
+        <div class="row2">
+          <div><label>Nom complet</label><input type="text" id="f-name" placeholder="Votre nom"></div>
+          <div><label>E-mail</label><input type="email" id="f-email" placeholder="vous@email.com"></div>
+        </div>
+        <div class="row2">
+          <div>
+            <label>Circuit</label>
+            <select id="f-route">
+              <option>Boucle Marrakech ⇄ Merzouga — 3 jours</option>
+              <option>Fès → Marrakech via le Sahara — 5 jours</option>
+              <option>Pas encore sûr</option>
+            </select>
+          </div>
+          <div>
+            <label>Taille du groupe</label>
+            <input type="number" id="f-group" placeholder="ex. 2" min="1">
+          </div>
+        </div>
+        <div class="row2">
+          <div>
+            <label>Dates de voyage</label>
+            <input type="text" id="f-dates" placeholder="ex. mi-octobre, flexible">
+          </div>
+          <div>
+            <label>Niveau de camp</label>
+            <select id="f-tier">
+              <option>Standard</option>
+              <option>Deluxe (salle de bain privée)</option>
+              <option>Luxe</option>
+              <option>Pas encore sûr</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <label>Autre chose ?</label>
+          <textarea id="f-notes" placeholder="Véhicule privé ou partagé, besoins alimentaires, occasions spéciales..."></textarea>
+        </div>
+        <div class="row2">
+          <div>
+            <label>Activité aux dunes</label>
+            <select id="f-activity">
+              <option>Balade à chameau (incluse)</option>
+              <option>Quad</option>
+              <option>Buggy des dunes</option>
+              <option>Pas encore sûr</option>
+            </select>
+          </div>
+          <div>
+            <label>Lever ou coucher du soleil ?</label>
+            <select id="f-time">
+              <option>Coucher</option>
+              <option>Lever</option>
+              <option>Les deux si possible</option>
+              <option>Pas de préférence</option>
+            </select>
+          </div>
+        </div>
+        <button class="submit-btn" type="submit">Envoyer via WhatsApp</button>
+        <p style="font-size:0.78rem; color:#8a8067; margin-top:2px;">Ouvre WhatsApp avec vos informations pré-remplies — rien n'est envoyé avant que vous n'appuyiez sur envoyer là-bas.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<script>
+  const WHATSAPP_NUMBER = "212638602183";
+
+  document.getElementById('inquiryForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const val = id => document.getElementById(id).value.trim();
+    const lines = [
+      "Bonjour ! J'aimerais organiser un voyage :",
+      val('f-name') ? "Nom : " + val('f-name') : null,
+      "Circuit : " + val('f-route'),
+      val('f-group') ? "Taille du groupe : " + val('f-group') : null,
+      val('f-dates') ? "Dates : " + val('f-dates') : null,
+      "Niveau de camp : " + val('f-tier'),
+      "Activité : " + val('f-activity') + " (" + val('f-time') + ")",
+      val('f-notes') ? "Notes : " + val('f-notes') : null,
+      val('f-email') ? "E-mail : " + val('f-email') : null,
+    ].filter(Boolean);
+    const text = encodeURIComponent(lines.join("\n"));
+    window.open("https://wa.me/" + WHATSAPP_NUMBER + "?text=" + text, "_blank");
+  });
+</script>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h5>Route of the Dunes</h5>
+        <p style="max-width:32ch; opacity:0.85;">Circuits privés dans le désert depuis Marrakech et Fès.</p>
+      </div>
+      <div>
+        <h5>Circuits</h5>
+        <ul>
+          <li><a href="#routes">Boucle Kasbahs et Dunes</a></li>
+          <li><a href="#routes">Fès au Sahara</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="tel:+212638602183">+212 6 38 60 21 83</a></li>
+          <li><a href="mailto:hello@example.com">hello@example.com</a> — à remplacer par votre e-mail réel</li>
+          <li><a href="https://wa.me/212638602183" target="_blank">Écrivez-nous sur WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>Site en construction — photos et contenu à venir</span>
+      <span>Version française, septembre 2026</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
