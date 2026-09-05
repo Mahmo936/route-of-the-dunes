@@ -104,6 +104,14 @@
     overflow:hidden;
     padding-bottom:0;
   }
+  .hero-bg-photo{
+    position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0;
+  }
+  .hero-overlay{
+    position:absolute; inset:0; z-index:1;
+    background:linear-gradient(180deg, rgba(24,35,56,0.55) 0%, rgba(24,35,56,0.75) 55%, rgba(24,35,56,0.92) 100%);
+  }
+  .hero-inner{ position:relative; z-index:2; }
   .hero-inner{
     max-width:1120px; margin:0 auto; padding:88px 28px 0;
     display:grid; grid-template-columns: 1.05fr 0.95fr; gap:40px; align-items:end;
@@ -142,6 +150,7 @@
   .fig .lab{font-size:0.82rem; color:rgba(248,243,230,0.65);}
   .dunes{
     width:100%; height:auto; display:block; margin-top:56px;
+    position:relative; z-index:2;
   }
   .section{padding:84px 0;}
   .section-head{
@@ -162,6 +171,10 @@
     border:1px solid #e4d8b9;
     padding:30px 28px 28px;
     position:relative;
+  }
+  .route-card-img{
+    display:block; width:calc(100% + 56px); height:180px; object-fit:cover;
+    margin:-30px -28px 20px;
   }
   .route-card:nth-child(2){margin-top:34px;}
   .route-days{
@@ -236,6 +249,10 @@
   .activities .tag{color:var(--ochre-2);}
   .act-grid{display:grid; grid-template-columns: repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line);}
   .act-card{background:var(--night); padding:30px 26px;}
+  .act-card-img{
+    display:block; width:calc(100% + 52px); height:160px; object-fit:cover;
+    margin:-30px -26px 18px;
+  }
   .act-time{
     display:inline-flex; gap:8px; font-size:0.76rem; margin-bottom:16px;
   }
@@ -374,6 +391,9 @@
 </header>
 
 <section class="hero">
+  <!-- Photo: pexels.com/photo/2403629 -->
+  <img class="hero-bg-photo" src="https://images.pexels.com/photos/2403629/pexels-photo-2403629.jpeg?auto=compress&cs=tinysrgb&w=1600&q=80" alt="Dunes de sable doré sous un ciel de coucher de soleil près de Merzouga, Maroc" loading="eager">
+  <div class="hero-overlay"></div>
   <div class="hero-inner">
     <div>
       <span class="hero-kicker">Marrakech · Ouarzazate · Dadès · Merzouga · Fès</span>
@@ -408,6 +428,8 @@
     </div>
     <div class="route-grid">
       <div class="route-card">
+        <!-- Photo: pexels.com/photo/34856121 -->
+        <img class="route-card-img" src="https://images.pexels.com/photos/34856121/pexels-photo-34856121.jpeg?auto=compress&cs=tinysrgb&w=900&q=80" alt="La kasbah d'Aït Ben Haddou, un village fortifié du sud du Maroc" loading="lazy">
         <div class="route-days"><span class="n">3</span><span class="u">jours / 2 nuits</span></div>
         <h3>Boucle Marrakech ⇄ Merzouga</h3>
         <div class="route-stops">
@@ -417,6 +439,8 @@
         <a class="route-link" href="#itinerary">Voir le programme jour par jour</a>
       </div>
       <div class="route-card">
+        <!-- Photo: pexels.com/photo/28829633 -->
+        <img class="route-card-img" src="https://images.pexels.com/photos/28829633/pexels-photo-28829633.jpeg?auto=compress&cs=tinysrgb&w=900&q=80" alt="Dunes de sable doré le long de la route désertique dans le sud du Maroc" loading="lazy">
         <div class="route-days"><span class="n">5</span><span class="u">jours / 4 nuits</span></div>
         <h3>Fès → Marrakech via le Sahara</h3>
         <div class="route-stops">
@@ -478,18 +502,24 @@
     </div>
     <div class="act-grid">
       <div class="act-card">
+        <!-- Photo: pexels.com/photo/33566027 -->
+        <img class="act-card-img" src="https://images.pexels.com/photos/33566027/pexels-photo-33566027.jpeg?auto=compress&cs=tinysrgb&w=700&q=80" alt="Caravane de chameaux silhouettée contre un coucher de soleil sur les dunes" loading="lazy">
         <div class="act-time"><span>Lever</span><span>Coucher</span></div>
         <h3>Balade à dos de chameau</h3>
         <p>La façon classique d'arriver — une balade tranquille avec votre guide, incluse dans chaque circuit.</p>
         <div class="act-price">Inclus dans chaque circuit</div>
       </div>
       <div class="act-card">
+        <!-- Photo: pexels.com/photo/33566025 -->
+        <img class="act-card-img" src="https://images.pexels.com/photos/33566025/pexels-photo-33566025.jpeg?auto=compress&cs=tinysrgb&w=700&q=80" alt="Véhicule tout-terrain roulant sur les dunes de sable" loading="lazy">
         <div class="act-time"><span>Lever</span><span>Coucher</span></div>
         <h3>Quad</h3>
         <p>Traversez l'erg vous-même, à votre rythme — une façon plus active d'atteindre les mêmes dunes.</p>
         <div class="act-price">Option, à partir de 35€</div>
       </div>
       <div class="act-card">
+        <!-- Photo: pexels.com/photo/33566024 -->
+        <img class="act-card-img" src="https://images.pexels.com/photos/33566024/pexels-photo-33566024.jpeg?auto=compress&cs=tinysrgb&w=700&q=80" alt="Véhicule tout-terrain traversant les dunes du désert" loading="lazy">
         <div class="act-time"><span>Lever</span><span>Coucher</span></div>
         <h3>Buggy des dunes</h3>
         <p>Sessions en buggy, seul ou partagées, sur les plus hautes dunes — l'option la plus sportive, selon la météo et l'état des dunes.</p>
@@ -710,6 +740,8 @@
       <div>
         <span class="tag">Qui est derrière ce projet</span>
         <h2>Une petite équipe locale, basée à Marrakech.</h2>
+        <!-- Photo: pexels.com/photo/32013556 -->
+        <img src="https://images.pexels.com/photos/32013556/pexels-photo-32013556.jpeg?auto=compress&cs=tinysrgb&w=700&q=80" alt="Une caravane de chameaux avec un guide local traversant le désert marocain" loading="lazy" style="width:100%; max-width:420px; height:260px; object-fit:cover; border-radius:2px; margin-top:22px; display:block;">
       </div>
       <div class="about-body">
         <p>Route of the Dunes est géré par une petite équipe locale basée à Marrakech, en partenariat avec des guides agréés dans tout le sud du Maroc — du Haut Atlas aux dunes de l'Erg Chebbi. Chaque circuit sur ce site est un circuit que nous conduisons nous-mêmes.</p>
