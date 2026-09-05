@@ -238,6 +238,16 @@
   .itinerary{background:var(--night); color:var(--cream);}
   .itinerary .section-head .sub{color:rgba(248,243,230,0.6);}
   .itinerary .tag{color:var(--ochre-2);}
+  .itin-tabs{display:flex; gap:12px; margin-bottom:32px; flex-wrap:wrap;}
+  .itin-tab{
+    background:transparent; border:1px solid rgba(248,243,230,0.3); color:rgba(248,243,230,0.72);
+    padding:10px 20px; font-family:'Work Sans', sans-serif; font-size:0.92rem;
+    cursor:pointer; transition:all .2s ease;
+  }
+  .itin-tab:hover{border-color:var(--ochre-2); color:var(--cream);}
+  .itin-tab.active{background:var(--ochre-2); color:var(--night); border-color:var(--ochre-2); font-weight:600;}
+  .itin-panel{display:none;}
+  .itin-panel.active{display:block;}
   .timeline{
     display:grid; gap:0;
     border-top:1px solid var(--line);
@@ -558,7 +568,7 @@
           <span>Marrakesh</span><span>Aït Ben Haddou</span><span>Ouarzazate</span><span>Dadès Valley</span><span>Todra Gorge</span><span>Merzouga</span>
         </div>
         <p>The classic Sahara run, and the one most travelers book first: the High Atlas pass, the UNESCO kasbah of Aït Ben Haddou, a walk into Todra Gorge, a sunset camel trek into Erg Chebbi, and a night under canvas before looping back to Marrakesh.</p>
-        <a class="route-link" href="#itinerary">View day by day</a>
+        <a class="route-link" href="#itinerary-3day">View day by day</a>
       </div>
       <div class="route-card">
         <!-- Photo: pexels.com/photo/28829633 -->
@@ -569,7 +579,7 @@
           <span>Fes</span><span>Ifrane</span><span>Azrou Cedar Forest</span><span>Ziz Valley</span><span>Merzouga</span><span>Todra</span><span>Dadès</span><span>Marrakesh</span>
         </div>
         <p>A one-way crossing of the country at a relaxed pace: the "Switzerland of Morocco" at Ifrane, Barbary macaques in the Azrou cedar forest, two nights at the dunes, then a slower return through Todra and Dadès to finish in Marrakesh.</p>
-        <a class="route-link" href="#itinerary">View day by day</a>
+        <a class="route-link" href="#itinerary-5day">View day by day</a>
       </div>
     </div>
   </div>
@@ -579,12 +589,18 @@
   <div class="wrap">
     <div class="section-head">
       <div>
-        <span class="tag">Marrakesh ⇄ Merzouga Loop — sample</span>
-        <h2>What three days actually look like.</h2>
+        <span class="tag">Sample itineraries</span>
+        <h2>What each route actually looks like.</h2>
       </div>
-      <p class="sub">This is the shape nearly every Marrakesh–Merzouga tour follows — adjust stops, timings and meals to match your own route.</p>
+      <p class="sub">Two routes, two shapes — pick a tab to see the day-by-day. Adjust stops, timings and meals to match your own trip.</p>
     </div>
-    <div class="timeline">
+
+    <div class="itin-tabs" role="tablist">
+      <button class="itin-tab active" type="button" data-target="itin-3day" id="tab-itin-3day" role="tab" aria-selected="true">3 Days / 2 Nights — Marrakesh Loop</button>
+      <button class="itin-tab" type="button" data-target="itin-5day" id="tab-itin-5day" role="tab" aria-selected="false">5 Days / 4 Nights — Fes Crossing</button>
+    </div>
+
+    <div class="timeline itin-panel active" id="itinerary-3day" role="tabpanel" aria-labelledby="tab-itin-3day">
       <div class="day-row">
         <div class="day-marker">01<span class="lbl">Day</span></div>
         <div>
@@ -612,8 +628,93 @@
         <div class="day-meta"><div>~7h on the road</div><div>Breakfast</div></div>
       </div>
     </div>
+
+    <div class="timeline itin-panel" id="itinerary-5day" role="tabpanel" aria-labelledby="tab-itin-5day">
+      <div class="day-row">
+        <div class="day-marker">01<span class="lbl">Day</span></div>
+        <div>
+          <h4>Fes → Ifrane → Azrou Cedar Forest → Ziz Valley</h4>
+          <p>Cross the Middle Atlas through Ifrane (the "Switzerland of Morocco") and stop in the Azrou cedar forest to see the Barbary macaques, then continue south to overnight in the Ziz Valley.</p>
+        </div>
+        <div class="day-meta"><div>~7h on the road</div><div>Lunch, dinner</div></div>
+      </div>
+      <div class="day-row">
+        <div class="day-marker">02<span class="lbl">Day</span></div>
+        <div>
+          <h4>Ziz Valley → Merzouga → Erg Chebbi</h4>
+          <p>Follow the Ziz palm groves down into the desert, arrive in Merzouga by early afternoon, then head out for a sunset camel trek into Erg Chebbi and a night at the desert camp.</p>
+        </div>
+        <div class="day-meta"><div>~4h on the road</div><div>Breakfast, dinner</div></div>
+      </div>
+      <div class="day-row">
+        <div class="day-marker">03<span class="lbl">Day</span></div>
+        <div>
+          <h4>Sunrise at the dunes → Merzouga → free time</h4>
+          <p>Watch the sunrise from camp, ride back out of the dunes, and spend the rest of the day around Merzouga (optional add-ons like a <a href="blog-khamlia-gnawa-music.html">Khamlia Gnawa music evening</a> or a fossil workshop in Erfoud) before overnighting locally.</p>
+        </div>
+        <div class="day-meta"><div>Free time</div><div>Breakfast, dinner</div></div>
+      </div>
+      <div class="day-row">
+        <div class="day-marker">04<span class="lbl">Day</span></div>
+        <div>
+          <h4>Merzouga → Todra Gorge → Dadès Valley</h4>
+          <p>Drive north to walk into Todra Gorge between its canyon walls, then continue to the Dadès Valley (the "Valley of a Thousand Kasbahs") for the night.</p>
+        </div>
+        <div class="day-meta"><div>~6h on the road</div><div>Breakfast, dinner</div></div>
+      </div>
+      <div class="day-row">
+        <div class="day-marker">05<span class="lbl">Day</span></div>
+        <div>
+          <h4>Dadès Valley → Ouarzazate → Marrakesh</h4>
+          <p>Cross back over the High Atlas via the Tizi n'Tichka pass, with a stop in Ouarzazate, arriving in Marrakesh by evening.</p>
+        </div>
+        <div class="day-meta"><div>~7h on the road</div><div>Breakfast</div></div>
+      </div>
+    </div>
   </div>
 </section>
+
+<script>
+  (function(){
+    var tabs = document.querySelectorAll('.itin-tab');
+    var panels = document.querySelectorAll('.itin-panel');
+
+    function showItinTab(targetId){
+      tabs.forEach(function(t){
+        var isActive = t.dataset.target === targetId;
+        t.classList.toggle('active', isActive);
+        t.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      });
+      panels.forEach(function(p){
+        p.classList.toggle('active', p.id === targetId);
+      });
+    }
+
+    tabs.forEach(function(tab){
+      tab.addEventListener('click', function(){
+        showItinTab(tab.dataset.target);
+      });
+    });
+
+    function handleItinHash(){
+      var hash = window.location.hash.replace('#', '');
+      if(hash === 'itinerary-5day'){
+        showItinTab('itinerary-5day');
+        var el = document.getElementById('itinerary-5day');
+        if(el){ el.scrollIntoView({behavior:'smooth', block:'start'}); }
+      } else if(hash === 'itinerary-3day' || hash === 'itinerary'){
+        showItinTab('itinerary-3day');
+        if(hash === 'itinerary-3day'){
+          var el2 = document.getElementById('itinerary-3day');
+          if(el2){ el2.scrollIntoView({behavior:'smooth', block:'start'}); }
+        }
+      }
+    }
+
+    window.addEventListener('hashchange', handleItinHash);
+    handleItinHash();
+  })();
+</script>
 
 <section class="section activities" id="activities">
   <div class="wrap">

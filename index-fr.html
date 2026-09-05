@@ -194,6 +194,16 @@
   .itinerary{background:var(--night); color:var(--cream);}
   .itinerary .section-head .sub{color:rgba(248,243,230,0.6);}
   .itinerary .tag{color:var(--ochre-2);}
+  .itin-tabs{display:flex; gap:12px; margin-bottom:32px; flex-wrap:wrap;}
+  .itin-tab{
+    background:transparent; border:1px solid rgba(248,243,230,0.3); color:rgba(248,243,230,0.72);
+    padding:10px 20px; font-family:'Work Sans', sans-serif; font-size:0.92rem;
+    cursor:pointer; transition:all .2s ease;
+  }
+  .itin-tab:hover{border-color:var(--ochre-2); color:var(--cream);}
+  .itin-tab.active{background:var(--ochre-2); color:var(--night); border-color:var(--ochre-2); font-weight:600;}
+  .itin-panel{display:none;}
+  .itin-panel.active{display:block;}
   .timeline{
     display:grid; gap:0;
     border-top:1px solid var(--line);
@@ -466,7 +476,7 @@
           <span>Marrakech</span><span>Aït Ben Haddou</span><span>Ouarzazate</span><span>Vallée du Dadès</span><span>Gorges du Todra</span><span>Merzouga</span>
         </div>
         <p>Le grand classique du Sahara, celui que réservent d'abord la plupart des voyageurs : le col du Haut Atlas, la kasbah UNESCO d'Aït Ben Haddou, une marche dans les gorges du Todra, une balade à chameau au coucher du soleil vers Erg Chebbi, et une nuit sous tente avant de revenir à Marrakech.</p>
-        <a class="route-link" href="#itinerary">Voir le programme jour par jour</a>
+        <a class="route-link" href="#itinerary-3day">Voir le programme jour par jour</a>
       </div>
       <div class="route-card">
         <!-- Photo: pexels.com/photo/28829633 -->
@@ -477,7 +487,7 @@
           <span>Fès</span><span>Ifrane</span><span>Forêt de cèdres d'Azrou</span><span>Vallée du Ziz</span><span>Merzouga</span><span>Todra</span><span>Dadès</span><span>Marrakech</span>
         </div>
         <p>Une traversée du pays dans un sens, à un rythme plus tranquille : la "Suisse marocaine" à Ifrane, les macaques de Barbarie dans la forêt de cèdres d'Azrou, deux nuits aux dunes, puis un retour plus posé par Todra et Dadès jusqu'à Marrakech.</p>
-        <a class="route-link" href="#itinerary">Voir le programme jour par jour</a>
+        <a class="route-link" href="#itinerary-5day">Voir le programme jour par jour</a>
       </div>
     </div>
   </div>
@@ -487,12 +497,18 @@
   <div class="wrap">
     <div class="section-head">
       <div>
-        <span class="tag">Boucle Marrakech ⇄ Merzouga — exemple</span>
-        <h2>À quoi ressemblent vraiment ces trois jours.</h2>
+        <span class="tag">Exemples de circuits</span>
+        <h2>À quoi ressemble chaque circuit.</h2>
       </div>
-      <p class="sub">C'est le déroulé que suivent la plupart des circuits Marrakech–Merzouga — ajustez les arrêts, horaires et repas selon votre propre circuit.</p>
+      <p class="sub">Deux circuits, deux formats — choisissez un onglet pour voir le déroulé jour par jour. Ajustez les arrêts, horaires et repas selon votre propre voyage.</p>
     </div>
-    <div class="timeline">
+
+    <div class="itin-tabs" role="tablist">
+      <button class="itin-tab active" type="button" data-target="itin-3day" id="tab-itin-3day" role="tab" aria-selected="true">3 jours / 2 nuits — Boucle Marrakech</button>
+      <button class="itin-tab" type="button" data-target="itin-5day" id="tab-itin-5day" role="tab" aria-selected="false">5 jours / 4 nuits — Traversée Fès</button>
+    </div>
+
+    <div class="timeline itin-panel active" id="itinerary-3day" role="tabpanel" aria-labelledby="tab-itin-3day">
       <div class="day-row">
         <div class="day-marker">01<span class="lbl">Jour</span></div>
         <div>
@@ -520,8 +536,93 @@
         <div class="day-meta"><div>~7h de route</div><div>Petit-déjeuner</div></div>
       </div>
     </div>
+
+    <div class="timeline itin-panel" id="itinerary-5day" role="tabpanel" aria-labelledby="tab-itin-5day">
+      <div class="day-row">
+        <div class="day-marker">01<span class="lbl">Jour</span></div>
+        <div>
+          <h4>Fès → Ifrane → Forêt de cèdres d'Azrou → Vallée du Ziz</h4>
+          <p>Traversée du Moyen Atlas par Ifrane (la « Suisse du Maroc ») et arrêt dans la forêt de cèdres d'Azrou pour voir les magots de Barbarie, puis route vers le sud pour la nuit dans la vallée du Ziz.</p>
+        </div>
+        <div class="day-meta"><div>~7h de route</div><div>Déjeuner, dîner</div></div>
+      </div>
+      <div class="day-row">
+        <div class="day-marker">02<span class="lbl">Jour</span></div>
+        <div>
+          <h4>Vallée du Ziz → Merzouga → Erg Chebbi</h4>
+          <p>Descente le long des palmeraies du Ziz jusqu'au désert, arrivée à Merzouga en début d'après-midi, puis départ pour une balade à chameau au coucher du soleil dans l'Erg Chebbi et nuit au camp du désert.</p>
+        </div>
+        <div class="day-meta"><div>~4h de route</div><div>Petit-déjeuner, dîner</div></div>
+      </div>
+      <div class="day-row">
+        <div class="day-marker">03<span class="lbl">Jour</span></div>
+        <div>
+          <h4>Lever du soleil aux dunes → Merzouga → temps libre</h4>
+          <p>Lever du soleil depuis le camp, retour à cheval sur les dunes, puis journée libre autour de Merzouga (options comme une <a href="blog-khamlia-gnawa-music.html">soirée musique Gnaoua à Khamlia</a> ou un atelier fossiles à Erfoud) avant la nuit sur place.</p>
+        </div>
+        <div class="day-meta"><div>Temps libre</div><div>Petit-déjeuner, dîner</div></div>
+      </div>
+      <div class="day-row">
+        <div class="day-marker">04<span class="lbl">Jour</span></div>
+        <div>
+          <h4>Merzouga → Gorges du Todra → Vallée du Dadès</h4>
+          <p>Route vers le nord pour marcher dans les gorges du Todra entre leurs parois rocheuses, puis direction la vallée du Dadès (la « Vallée des Mille Kasbahs ») pour la nuit.</p>
+        </div>
+        <div class="day-meta"><div>~6h de route</div><div>Petit-déjeuner, dîner</div></div>
+      </div>
+      <div class="day-row">
+        <div class="day-marker">05<span class="lbl">Jour</span></div>
+        <div>
+          <h4>Vallée du Dadès → Ouarzazate → Marrakech</h4>
+          <p>Retour par le Haut Atlas via le col du Tizi n'Tichka, avec un arrêt à Ouarzazate, arrivée à Marrakech en soirée.</p>
+        </div>
+        <div class="day-meta"><div>~7h de route</div><div>Petit-déjeuner</div></div>
+      </div>
+    </div>
   </div>
 </section>
+
+<script>
+  (function(){
+    var tabs = document.querySelectorAll('.itin-tab');
+    var panels = document.querySelectorAll('.itin-panel');
+
+    function showItinTab(targetId){
+      tabs.forEach(function(t){
+        var isActive = t.dataset.target === targetId;
+        t.classList.toggle('active', isActive);
+        t.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      });
+      panels.forEach(function(p){
+        p.classList.toggle('active', p.id === targetId);
+      });
+    }
+
+    tabs.forEach(function(tab){
+      tab.addEventListener('click', function(){
+        showItinTab(tab.dataset.target);
+      });
+    });
+
+    function handleItinHash(){
+      var hash = window.location.hash.replace('#', '');
+      if(hash === 'itinerary-5day'){
+        showItinTab('itinerary-5day');
+        var el = document.getElementById('itinerary-5day');
+        if(el){ el.scrollIntoView({behavior:'smooth', block:'start'}); }
+      } else if(hash === 'itinerary-3day' || hash === 'itinerary'){
+        showItinTab('itinerary-3day');
+        if(hash === 'itinerary-3day'){
+          var el2 = document.getElementById('itinerary-3day');
+          if(el2){ el2.scrollIntoView({behavior:'smooth', block:'start'}); }
+        }
+      }
+    }
+
+    window.addEventListener('hashchange', handleItinHash);
+    handleItinHash();
+  })();
+</script>
 
 <section class="section activities" id="activities">
   <div class="wrap">
