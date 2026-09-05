@@ -328,6 +328,34 @@
 
   /* ---------- TESTIMONIALS ---------- */
   .testimonials{background:var(--sand);}
+  .rating-summary{margin-bottom:32px;}
+  .rating-summary-empty{
+    display:inline-flex; align-items:center; gap:10px;
+    font-size:0.92rem; color:#7a705c; background:#fff;
+    border:1px solid #d8c99e; padding:10px 18px;
+  }
+  .rating-summary-empty .stars-placeholder{color:#c9bb95; letter-spacing:2px;}
+  .review-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+  .review-card{background:#fff; border:1px solid #d8c99e; padding:24px 22px;}
+  .review-card-stars{color:var(--ochre); font-size:0.95rem; margin-bottom:10px;}
+  .review-card-quote{font-size:0.95rem; color:#3a3226; font-style:italic; margin-bottom:14px;}
+  .review-card-meta{font-size:0.84rem; color:#7a705c;}
+  .review-card-empty{
+    grid-column:1 / -1;
+    text-align:center; padding:44px 24px;
+    border:1px dashed #c9bb95; background:transparent;
+  }
+  .review-card-icon{font-size:1.8rem; margin-bottom:14px; color:var(--rust);}
+  .review-card-empty h3{font-size:1.1rem; margin-bottom:8px;}
+  .review-card-empty p{font-size:0.94rem; color:#5a5142; max-width:44ch; margin:0 auto 18px;}
+  .review-cta{display:inline-block; color:var(--rust); font-size:0.9rem; text-decoration:none; border-bottom:1px solid var(--rust); padding-bottom:2px;}
+  .trust-badges{display:flex; flex-wrap:wrap; gap:12px; margin:22px 0 8px;}
+  .trust-badge{
+    display:inline-flex; align-items:center; gap:8px;
+    background:#fff; border:1px solid #d8c99e;
+    padding:9px 16px; font-size:0.86rem; color:#4f473a;
+  }
+  .trust-badge .tb-icon{color:var(--rust); font-weight:700;}
   .testi-layout{display:grid; grid-template-columns: 1.2fr 1fr; gap:28px; align-items:stretch;}
   .testi-featured{
     background:#fff; border:1px solid #d8c99e; padding:40px 36px;
@@ -447,6 +475,7 @@
     .act-grid{grid-template-columns:1fr;}
     .about-grid{grid-template-columns:1fr;}
     .testi-layout{grid-template-columns:1fr;}
+    .review-grid{grid-template-columns:1fr;}
     .inquiry-grid{grid-template-columns:1fr;}
     .row2{grid-template-columns:1fr;}
     nav ul{display:none;}
@@ -632,6 +661,12 @@
         <h2>Three ways to do the same route.</h2>
       </div>
       <p class="sub">Per person, based on a small group of 4–6 travelers. Solo travelers and larger groups get an adjusted quote — final price confirmed once we know your dates.</p>
+    </div>
+
+    <div class="trust-badges">
+      <span class="trust-badge"><span class="tb-icon">✓</span> Licensed Local Guides</span>
+      <span class="trust-badge"><span class="tb-icon">✓</span> Direct WhatsApp Contact</span>
+      <span class="trust-badge"><span class="tb-icon">✓</span> No Deposit to Inquire</span>
     </div>
 
     <div class="price-route-label">Marrakesh ⇄ Merzouga Loop — 3 days / 2 nights</div>
@@ -857,6 +892,31 @@
       </div>
       <p class="sub">We're a new site and haven't collected guest reviews yet — check back soon, or message us on WhatsApp with any questions in the meantime.</p>
     </div>
+
+    <div class="rating-summary" id="ratingSummary">
+      <!-- Ready for a real aggregate rating (e.g. "4.8/5 from 32 trips") once reviews exist — intentionally not shown until then. -->
+      <div class="rating-summary-empty">
+        <span class="stars-placeholder">☆☆☆☆☆</span> No reviews yet
+      </div>
+    </div>
+
+    <!--
+      Review card structure, ready for real reviews once available:
+
+      <div class="review-card">
+        <div class="review-card-stars">★★★★★</div>
+        <p class="review-card-quote">"[Real guest quote]"</p>
+        <div class="review-card-meta">[Name], [Country] — [Route taken]</div>
+      </div>
+    -->
+    <div class="review-grid">
+      <div class="review-card review-card-empty">
+        <div class="review-card-icon">💬</div>
+        <h3>Be one of our first reviewed trips</h3>
+        <p>Message us on WhatsApp after your tour and we'll feature your review here, with your name and the route you took.</p>
+        <a class="review-cta" href="https://wa.me/212639602183" target="_blank">Message us on WhatsApp</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -899,33 +959,44 @@
         <h2>Tell us your dates, we'll shape the route.</h2>
         <p class="inquiry-note">Every trip is quoted after a short exchange — send the form and expect a reply with <strong>timing and a price range</strong> within a day.</p>
       </div>
-      <form id="inquiryForm">
+      <form id="inquiryForm" action="https://formspree.io/f/mbgjarze" method="POST">
         <div class="row2">
-          <div><label>Full name <span class="req">*</span></label><input type="text" id="f-name" placeholder="Your name" required></div>
-          <div><label>Email <span class="req">*</span></label><input type="email" id="f-email" placeholder="you@email.com" required></div>
+          <div><label>Full name <span class="req">*</span></label><input type="text" id="f-name" name="name" placeholder="Your name" required></div>
+          <div><label>Email <span class="req">*</span></label><input type="email" id="f-email" name="email" placeholder="you@email.com" required></div>
         </div>
         <div class="row2">
+          <div><label>WhatsApp / Phone <span class="req">*</span></label><input type="tel" id="f-phone" name="phone" placeholder="+212 6..." required></div>
           <div>
             <label>Route</label>
-            <select id="f-route">
+            <select id="f-route" name="route">
               <option>Marrakesh ⇄ Merzouga Loop — 3 days</option>
               <option>Fes → Marrakesh via the Sahara — 5 days</option>
               <option>Not sure yet</option>
             </select>
           </div>
+        </div>
+        <div class="row2">
           <div>
-            <label>Group size</label>
-            <input type="number" id="f-group" placeholder="e.g. 2" min="1">
+            <label>Start date</label>
+            <input type="date" id="f-start-date" name="start_date">
+          </div>
+          <div>
+            <label>Number of travelers</label>
+            <input type="number" id="f-group" name="travelers" placeholder="e.g. 2" min="1">
           </div>
         </div>
         <div class="row2">
           <div>
-            <label>Travel dates</label>
-            <input type="text" id="f-dates" placeholder="e.g. mid-October, flexible">
+            <label>Tour type</label>
+            <select id="f-tour-type" name="tour_type">
+              <option>Shared Group</option>
+              <option>Private — Standard</option>
+              <option>Private — Luxury</option>
+            </select>
           </div>
           <div>
             <label>Camp tier</label>
-            <select id="f-tier">
+            <select id="f-tier" name="camp_tier">
               <option>Standard</option>
               <option>Deluxe (private bathroom)</option>
               <option>Luxury</option>
@@ -933,14 +1004,10 @@
             </select>
           </div>
         </div>
-        <div>
-          <label>Anything else?</label>
-          <textarea id="f-notes" placeholder="Private or shared vehicle, dietary needs, special occasions..."></textarea>
-        </div>
         <div class="row2">
           <div>
             <label>Dune activity</label>
-            <select id="f-activity">
+            <select id="f-activity" name="activity">
               <option>Camel trek (included)</option>
               <option>Quad bike (ATV)</option>
               <option>Dune buggy</option>
@@ -949,7 +1016,7 @@
           </div>
           <div>
             <label>Sunrise or sunset?</label>
-            <select id="f-time">
+            <select id="f-time" name="time_of_day">
               <option>Sunset</option>
               <option>Sunrise</option>
               <option>Both if possible</option>
@@ -957,15 +1024,22 @@
             </select>
           </div>
         </div>
-        <button class="submit-btn" type="submit">Send via WhatsApp</button>
-        <p style="font-size:0.78rem; color:#8a8067; margin-top:2px;">Opens WhatsApp with your details pre-filled — nothing is sent until you press send there.</p>
+        <div>
+          <label>Special requests / notes</label>
+          <textarea id="f-notes" name="notes" placeholder="Dietary needs, special occasions, anything else..."></textarea>
+        </div>
+        <button class="submit-btn" type="submit">Send inquiry</button>
+        <p style="font-size:0.78rem; color:#8a8067; margin-top:2px;">Sends your request to us directly, and opens WhatsApp with the same details as a quick backup.</p>
       </form>
+      <div id="formSuccess" style="display:none; background:var(--night); color:var(--cream); padding:28px 26px; margin-top:4px;">
+        <h3 style="font-family:'Spectral', serif; font-size:1.15rem; margin-bottom:8px;">Thanks — request received!</h3>
+        <p style="color:rgba(248,243,230,0.85); font-size:0.96rem;">We've received your request and will get back to you via WhatsApp or email within 24 hours.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <script>
-  // TODO: replace with the real business WhatsApp number, digits only, country code first (no + or spaces)
   const WHATSAPP_NUMBER = "212639602183";
 
   document.getElementById('inquiryForm').addEventListener('submit', function(e){
@@ -975,20 +1049,48 @@
       form.reportValidity();
       return;
     }
-    const val = id => document.getElementById(id).value.trim();
-    const lines = [
-      "Hi! I'd like to plan a trip:",
-      val('f-name') ? "Name: " + val('f-name') : null,
-      "Route: " + val('f-route'),
-      val('f-group') ? "Group size: " + val('f-group') : null,
-      val('f-dates') ? "Dates: " + val('f-dates') : null,
-      "Camp tier: " + val('f-tier'),
-      "Activity: " + val('f-activity') + " (" + val('f-time') + ")",
-      val('f-notes') ? "Notes: " + val('f-notes') : null,
-      val('f-email') ? "Email: " + val('f-email') : null,
-    ].filter(Boolean);
-    const text = encodeURIComponent(lines.join("\n"));
-    window.open("https://wa.me/" + WHATSAPP_NUMBER + "?text=" + text, "_blank");
+
+    const formData = new FormData(form);
+    const val = name => (formData.get(name) || '').toString().trim();
+    const submitBtn = form.querySelector('.submit-btn');
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+
+    fetch(form.action, {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    }).then(response => {
+      if (response.ok) {
+        // Success — show confirmation and open WhatsApp with a pre-filled summary as a bonus.
+        form.style.display = 'none';
+        document.getElementById('formSuccess').style.display = 'block';
+
+        const lines = [
+          "Hi! I'd like to plan a trip:",
+          val('name') ? "Name: " + val('name') : null,
+          val('phone') ? "Phone: " + val('phone') : null,
+          "Route: " + val('route'),
+          val('start_date') ? "Start date: " + val('start_date') : null,
+          val('travelers') ? "Travelers: " + val('travelers') : null,
+          "Tour type: " + val('tour_type'),
+          "Camp tier: " + val('camp_tier'),
+          "Activity: " + val('activity') + " (" + val('time_of_day') + ")",
+          val('notes') ? "Notes: " + val('notes') : null,
+          val('email') ? "Email: " + val('email') : null,
+        ].filter(Boolean);
+        const text = encodeURIComponent(lines.join("\n"));
+        window.open("https://wa.me/" + WHATSAPP_NUMBER + "?text=" + text, "_blank");
+      } else {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send inquiry';
+        alert("Something went wrong sending the form — please try messaging us directly on WhatsApp instead.");
+      }
+    }).catch(() => {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send inquiry';
+      alert("Something went wrong sending the form — please try messaging us directly on WhatsApp instead.");
+    });
   });
 </script>
 
@@ -1012,7 +1114,7 @@
         <h5>Contact</h5>
         <ul>
           <li><a href="tel:+212639602183">+212 6 39 60 21 83</a></li>
-          <!-- TODO: add real contact email once available, e.g. contact@routeofthedunes.com -->
+          <li><a href="mailto:contact@routeofthedunes.com">contact@routeofthedunes.com</a></li>
           <li><a href="https://wa.me/212639602183" target="_blank">Message us on WhatsApp</a></li>
         </ul>
       </div>

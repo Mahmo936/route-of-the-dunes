@@ -270,6 +270,34 @@
   .about-figs .fig2 .lab{font-size:0.82rem; color:#7a705c;}
   .about-body p{color:#4f473a; margin-bottom:16px; max-width:60ch;}
   .testimonials{background:var(--sand);}
+  .rating-summary{margin-bottom:32px;}
+  .rating-summary-empty{
+    display:inline-flex; align-items:center; gap:10px;
+    font-size:0.92rem; color:#7a705c; background:#fff;
+    border:1px solid #d8c99e; padding:10px 18px;
+  }
+  .rating-summary-empty .stars-placeholder{color:#c9bb95; letter-spacing:2px;}
+  .review-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+  .review-card{background:#fff; border:1px solid #d8c99e; padding:24px 22px;}
+  .review-card-stars{color:var(--ochre); font-size:0.95rem; margin-bottom:10px;}
+  .review-card-quote{font-size:0.95rem; color:#3a3226; font-style:italic; margin-bottom:14px;}
+  .review-card-meta{font-size:0.84rem; color:#7a705c;}
+  .review-card-empty{
+    grid-column:1 / -1;
+    text-align:center; padding:44px 24px;
+    border:1px dashed #c9bb95; background:transparent;
+  }
+  .review-card-icon{font-size:1.8rem; margin-bottom:14px; color:var(--rust);}
+  .review-card-empty h3{font-size:1.1rem; margin-bottom:8px;}
+  .review-card-empty p{font-size:0.94rem; color:#5a5142; max-width:44ch; margin:0 auto 18px;}
+  .review-cta{display:inline-block; color:var(--rust); font-size:0.9rem; text-decoration:none; border-bottom:1px solid var(--rust); padding-bottom:2px;}
+  .trust-badges{display:flex; flex-wrap:wrap; gap:12px; margin:22px 0 8px;}
+  .trust-badge{
+    display:inline-flex; align-items:center; gap:8px;
+    background:#fff; border:1px solid #d8c99e;
+    padding:9px 16px; font-size:0.86rem; color:#4f473a;
+  }
+  .trust-badge .tb-icon{color:var(--rust); font-weight:700;}
   .testi-grid{display:grid; grid-template-columns: repeat(3,1fr); gap:24px;}
   .testi-card{background:#fff; border:1px solid #d8c99e; padding:26px 24px;}
   .testi-card p{font-size:0.96rem; color:#3a3226; margin-bottom:16px; font-style:italic;}
@@ -317,6 +345,7 @@
   form{display:grid; gap:16px;}
   .row2{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
   label{font-size:0.82rem; color:#5a5142; display:block; margin-bottom:6px;}
+  label .req{color:var(--rust);}
   input, select, textarea{
     width:100%; padding:11px 12px;
     border:1px solid #d8c99e; background:var(--cream);
@@ -358,6 +387,7 @@
     .act-grid{grid-template-columns:1fr;}
     .about-grid{grid-template-columns:1fr;}
     .testi-grid{grid-template-columns:1fr;}
+    .review-grid{grid-template-columns:1fr;}
     .inquiry-grid{grid-template-columns:1fr;}
     .row2{grid-template-columns:1fr;}
     nav ul{display:none;}
@@ -539,6 +569,12 @@
         <h2>Trois façons de faire le même circuit.</h2>
       </div>
       <p class="sub">Par personne, pour un petit groupe de 4 à 6 voyageurs. Voyageurs seuls et groupes plus larges reçoivent un devis ajusté — prix final confirmé une fois vos dates connues.</p>
+    </div>
+
+    <div class="trust-badges">
+      <span class="trust-badge"><span class="tb-icon">✓</span> Guides locaux agréés</span>
+      <span class="trust-badge"><span class="tb-icon">✓</span> Contact WhatsApp direct</span>
+      <span class="trust-badge"><span class="tb-icon">✓</span> Aucun acompte pour demander un devis</span>
     </div>
 
     <div class="price-route-label">Boucle Marrakech ⇄ Merzouga — 3 jours / 2 nuits</div>
@@ -763,6 +799,31 @@
       </div>
       <p class="sub">Nous sommes un nouveau site et n'avons pas encore recueilli d'avis de voyageurs — revenez bientôt, ou contactez-nous sur WhatsApp en attendant.</p>
     </div>
+
+    <div class="rating-summary" id="ratingSummary">
+      <!-- Ready for a real aggregate rating once reviews exist — intentionally not shown until then. -->
+      <div class="rating-summary-empty">
+        <span class="stars-placeholder">☆☆☆☆☆</span> Aucun avis pour le moment
+      </div>
+    </div>
+
+    <!--
+      Structure de carte d'avis, prête pour de vrais avis une fois disponibles :
+
+      <div class="review-card">
+        <div class="review-card-stars">★★★★★</div>
+        <p class="review-card-quote">« [Vrai témoignage] »</p>
+        <div class="review-card-meta">[Nom], [Pays] — [Circuit effectué]</div>
+      </div>
+    -->
+    <div class="review-grid">
+      <div class="review-card review-card-empty">
+        <div class="review-card-icon">💬</div>
+        <h3>Soyez l'un de nos premiers avis</h3>
+        <p>Contactez-nous sur WhatsApp après votre circuit et nous mettrons votre avis en avant ici, avec votre nom et le circuit effectué.</p>
+        <a class="review-cta" href="https://wa.me/212639602183" target="_blank">Contactez-nous sur WhatsApp</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -804,33 +865,44 @@
         <h2>Donnez-nous vos dates, on construit le circuit.</h2>
         <p class="inquiry-note">Chaque voyage est chiffré après un court échange — envoyez le formulaire, et attendez-vous à une réponse avec <strong>les dates et une fourchette de prix</strong> sous 24h.</p>
       </div>
-      <form id="inquiryForm">
+      <form id="inquiryForm" action="https://formspree.io/f/mbgjarze" method="POST">
         <div class="row2">
-          <div><label>Nom complet</label><input type="text" id="f-name" placeholder="Votre nom"></div>
-          <div><label>E-mail</label><input type="email" id="f-email" placeholder="vous@email.com"></div>
+          <div><label>Nom complet <span class="req">*</span></label><input type="text" id="f-name" name="name" placeholder="Votre nom" required></div>
+          <div><label>E-mail <span class="req">*</span></label><input type="email" id="f-email" name="email" placeholder="vous@email.com" required></div>
         </div>
         <div class="row2">
+          <div><label>WhatsApp / Téléphone <span class="req">*</span></label><input type="tel" id="f-phone" name="phone" placeholder="+212 6..." required></div>
           <div>
             <label>Circuit</label>
-            <select id="f-route">
+            <select id="f-route" name="route">
               <option>Boucle Marrakech ⇄ Merzouga — 3 jours</option>
               <option>Fès → Marrakech via le Sahara — 5 jours</option>
               <option>Pas encore sûr</option>
             </select>
           </div>
+        </div>
+        <div class="row2">
           <div>
-            <label>Taille du groupe</label>
-            <input type="number" id="f-group" placeholder="ex. 2" min="1">
+            <label>Date de départ</label>
+            <input type="date" id="f-start-date" name="start_date">
+          </div>
+          <div>
+            <label>Nombre de voyageurs</label>
+            <input type="number" id="f-group" name="travelers" placeholder="ex. 2" min="1">
           </div>
         </div>
         <div class="row2">
           <div>
-            <label>Dates de voyage</label>
-            <input type="text" id="f-dates" placeholder="ex. mi-octobre, flexible">
+            <label>Type de circuit</label>
+            <select id="f-tour-type" name="tour_type">
+              <option>Groupe partagé</option>
+              <option>Privé — Standard</option>
+              <option>Privé — Luxe</option>
+            </select>
           </div>
           <div>
             <label>Niveau de camp</label>
-            <select id="f-tier">
+            <select id="f-tier" name="camp_tier">
               <option>Standard</option>
               <option>Deluxe (salle de bain privée)</option>
               <option>Luxe</option>
@@ -838,14 +910,10 @@
             </select>
           </div>
         </div>
-        <div>
-          <label>Autre chose ?</label>
-          <textarea id="f-notes" placeholder="Véhicule privé ou partagé, besoins alimentaires, occasions spéciales..."></textarea>
-        </div>
         <div class="row2">
           <div>
             <label>Activité aux dunes</label>
-            <select id="f-activity">
+            <select id="f-activity" name="activity">
               <option>Balade à chameau (incluse)</option>
               <option>Quad</option>
               <option>Buggy des dunes</option>
@@ -854,7 +922,7 @@
           </div>
           <div>
             <label>Lever ou coucher du soleil ?</label>
-            <select id="f-time">
+            <select id="f-time" name="time_of_day">
               <option>Coucher</option>
               <option>Lever</option>
               <option>Les deux si possible</option>
@@ -862,9 +930,17 @@
             </select>
           </div>
         </div>
-        <button class="submit-btn" type="submit">Envoyer via WhatsApp</button>
-        <p style="font-size:0.78rem; color:#8a8067; margin-top:2px;">Ouvre WhatsApp avec vos informations pré-remplies — rien n'est envoyé avant que vous n'appuyiez sur envoyer là-bas.</p>
+        <div>
+          <label>Demandes particulières / notes</label>
+          <textarea id="f-notes" name="notes" placeholder="Besoins alimentaires, occasions spéciales, autre chose..."></textarea>
+        </div>
+        <button class="submit-btn" type="submit">Envoyer la demande</button>
+        <p style="font-size:0.78rem; color:#8a8067; margin-top:2px;">Envoie votre demande directement, et ouvre WhatsApp avec les mêmes informations en secours rapide.</p>
       </form>
+      <div id="formSuccess" style="display:none; background:var(--night); color:var(--cream); padding:28px 26px; margin-top:4px;">
+        <h3 style="font-family:'Spectral', serif; font-size:1.15rem; margin-bottom:8px;">Merci — demande reçue !</h3>
+        <p style="color:rgba(248,243,230,0.85); font-size:0.96rem;">Nous avons bien reçu votre demande et vous répondrons par WhatsApp ou e-mail sous 24 heures.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -874,20 +950,52 @@
 
   document.getElementById('inquiryForm').addEventListener('submit', function(e){
     e.preventDefault();
-    const val = id => document.getElementById(id).value.trim();
-    const lines = [
-      "Bonjour ! J'aimerais organiser un voyage :",
-      val('f-name') ? "Nom : " + val('f-name') : null,
-      "Circuit : " + val('f-route'),
-      val('f-group') ? "Taille du groupe : " + val('f-group') : null,
-      val('f-dates') ? "Dates : " + val('f-dates') : null,
-      "Niveau de camp : " + val('f-tier'),
-      "Activité : " + val('f-activity') + " (" + val('f-time') + ")",
-      val('f-notes') ? "Notes : " + val('f-notes') : null,
-      val('f-email') ? "E-mail : " + val('f-email') : null,
-    ].filter(Boolean);
-    const text = encodeURIComponent(lines.join("\n"));
-    window.open("https://wa.me/" + WHATSAPP_NUMBER + "?text=" + text, "_blank");
+    const form = e.target;
+    if(!form.checkValidity()){
+      form.reportValidity();
+      return;
+    }
+
+    const formData = new FormData(form);
+    const val = name => (formData.get(name) || '').toString().trim();
+    const submitBtn = form.querySelector('.submit-btn');
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Envoi...';
+
+    fetch(form.action, {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    }).then(response => {
+      if (response.ok) {
+        form.style.display = 'none';
+        document.getElementById('formSuccess').style.display = 'block';
+
+        const lines = [
+          "Bonjour ! J'aimerais organiser un voyage :",
+          val('name') ? "Nom : " + val('name') : null,
+          val('phone') ? "Téléphone : " + val('phone') : null,
+          "Circuit : " + val('route'),
+          val('start_date') ? "Date de départ : " + val('start_date') : null,
+          val('travelers') ? "Voyageurs : " + val('travelers') : null,
+          "Type de circuit : " + val('tour_type'),
+          "Niveau de camp : " + val('camp_tier'),
+          "Activité : " + val('activity') + " (" + val('time_of_day') + ")",
+          val('notes') ? "Notes : " + val('notes') : null,
+          val('email') ? "E-mail : " + val('email') : null,
+        ].filter(Boolean);
+        const text = encodeURIComponent(lines.join("\n"));
+        window.open("https://wa.me/" + WHATSAPP_NUMBER + "?text=" + text, "_blank");
+      } else {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Envoyer la demande';
+        alert("Un problème est survenu lors de l'envoi — essayez de nous contacter directement sur WhatsApp.");
+      }
+    }).catch(() => {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Envoyer la demande';
+      alert("Un problème est survenu lors de l'envoi — essayez de nous contacter directement sur WhatsApp.");
+    });
   });
 </script>
 
@@ -909,6 +1017,7 @@
         <h5>Contact</h5>
         <ul>
           <li><a href="tel:+212639602183">+212 6 39 60 21 83</a></li>
+          <li><a href="mailto:contact@routeofthedunes.com">contact@routeofthedunes.com</a></li>
           <li><a href="https://wa.me/212639602183" target="_blank">Écrivez-nous sur WhatsApp</a></li>
         </ul>
       </div>
