@@ -1,0 +1,4 @@
+name = "restless-surf-a441"
+compatibility_date = "2026-09-04"
+[assets]
+directory = "."
