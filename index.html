@@ -354,6 +354,11 @@
   /* ---------- ABOUT ---------- */
   .about{background:#fff;}
   .about-grid{display:grid; grid-template-columns: 0.9fr 1.1fr; gap:56px; align-items:start;}
+  .about-grid.reveal{opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease;}
+  .about-grid.reveal.is-visible{opacity:1; transform:translateY(0);}
+  @media (prefers-reduced-motion: reduce) {
+    .about-grid.reveal{opacity:1; transform:none; transition:none;}
+  }
   .about-figs{display:grid; gap:18px; margin-top:26px;}
   .about-figs .fig2{border-left:2px solid var(--rust); padding-left:14px;}
   .about-figs .fig2 .num{font-family:'Spectral', serif; font-size:1.5rem; display:block;}
@@ -1015,7 +1020,7 @@
 <!-- TODO: Frank to provide real years-running-tours and guide-count numbers -->
 <section class="section about" id="about">
   <div class="wrap">
-    <div class="about-grid">
+    <div class="about-grid reveal">
       <div>
         <span class="tag">Who's behind this</span>
         <h2>A small local team, based in Marrakesh.</h2>
@@ -1029,6 +1034,27 @@
     </div>
   </div>
 </section>
+
+<script>
+  (function(){
+    var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var el = document.querySelector('.about-grid.reveal');
+    if(!el) return;
+    if(reduceMotion || !('IntersectionObserver' in window)){
+      el.classList.add('is-visible');
+      return;
+    }
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    observer.observe(el);
+  })();
+</script>
 
 
 <!-- TODO: replace with real guest reviews once available -->
