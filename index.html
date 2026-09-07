@@ -31,25 +31,13 @@
           {"@type": "ListItem", "position": 2, "name": "Dadès Valley to Erg Chebbi via Todra Gorge"},
           {"@type": "ListItem", "position": 3, "name": "Sunrise at Erg Chebbi, return to Marrakesh"}
         ]
-      },
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "EUR",
-        "price": "119",
-        "description": "From, per person, shared group tour"
       }
     },
     {
       "@type": "TouristTrip",
       "name": "Fes to Marrakesh via the Sahara",
       "description": "5-day, 4-night one-way desert crossing from Fes to Marrakesh via Ifrane, Azrou cedar forest, Ziz Valley, Erg Chebbi, Todra Gorge and Dadès Valley.",
-      "touristType": ["Family", "Couples", "Solo travelers", "Groups"],
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "EUR",
-        "price": "275",
-        "description": "From, per person, shared group tour"
-      }
+      "touristType": ["Family", "Couples", "Solo travelers", "Groups"]
     }
   ]
 }
@@ -322,6 +310,8 @@
   .price-card ul{list-style:none; font-size:0.9rem; color:#4f473a; display:grid; gap:9px; margin-bottom:8px;}
   .price-card li{padding-left:16px; position:relative;}
   .price-card li::before{content:"—"; position:absolute; left:0; color:var(--ochre);}
+  .price-cta{display:inline-block; margin-top:14px; font-size:0.92rem; color:var(--rust); text-decoration:none; border-bottom:1px solid var(--rust); padding-bottom:2px; transition:opacity .15s ease;}
+  .price-cta:hover{opacity:0.7;}
   .price-note{font-size:0.84rem; color:#7a705c; margin-top:36px; max-width:60ch;}
 
   /* ---------- ACTIVITIES ---------- */
@@ -809,7 +799,7 @@
         <span class="tag">What it costs</span>
         <h2>Three ways to do the same route.</h2>
       </div>
-      <p class="sub">Per person, based on a small group of 4–6 travelers. Solo travelers and larger groups get an adjusted quote — final price confirmed once we know your dates.</p>
+      <p class="sub">Same route, three levels of comfort — request a quote and we'll send a real price based on your dates and group size.</p>
     </div>
 
     <div class="trust-badges">
@@ -822,34 +812,31 @@
     <div class="price-grid">
       <div class="price-card">
         <div class="price-tier">Shared Group</div>
-        <div class="price-amount">€119<sup>/pers.</sup></div>
-        <div class="price-unit">from, per person</div>
         <ul>
           <li>Shared minibus, up to 16 travelers</li>
           <li>Standard camp, shared bathrooms</li>
           <li>Sunset camel trek, 2 nights half-board</li>
         </ul>
+        <a class="price-cta" href="#inquiry">Request a quote →</a>
       </div>
       <div class="price-card featured">
         <span class="featured-flag">Most booked</span>
         <div class="price-tier">Private — Standard</div>
-        <div class="price-amount">€172<sup>/pers.</sup></div>
-        <div class="price-unit">from, per person</div>
         <ul>
           <li>Private 4×4 and driver-guide</li>
           <li>Standard or deluxe camp</li>
           <li>Fully flexible stops and pace</li>
         </ul>
+        <a class="price-cta" href="#inquiry">Request a quote →</a>
       </div>
       <div class="price-card">
         <div class="price-tier">Private — Luxury</div>
-        <div class="price-amount">€239<sup>/pers.</sup></div>
-        <div class="price-unit">from, per person</div>
         <ul>
           <li>Private vehicle, priority stops</li>
           <li>Luxury ensuite tent, hot shower</li>
           <li>Sandboarding &amp; quad-bike add-ons</li>
         </ul>
+        <a class="price-cta" href="#inquiry">Request a quote →</a>
       </div>
     </div>
 
@@ -857,38 +844,34 @@
     <div class="price-grid">
       <div class="price-card">
         <div class="price-tier">Shared Group</div>
-        <div class="price-amount">€275<sup>/pers.</sup></div>
-        <div class="price-unit">from, per person</div>
         <ul>
           <li>Shared minibus, up to 16 travelers</li>
           <li>Standard camp, shared bathrooms</li>
           <li>2 nights near the dunes, half-board</li>
         </ul>
+        <a class="price-cta" href="#inquiry">Request a quote →</a>
       </div>
       <div class="price-card featured">
         <span class="featured-flag">Most booked</span>
         <div class="price-tier">Private — Standard</div>
-        <div class="price-amount">€369<sup>/pers.</sup></div>
-        <div class="price-unit">from, per person</div>
         <ul>
           <li>Private 4×4 and driver-guide</li>
           <li>Standard or deluxe camp</li>
           <li>Slower pace, extra gorge time</li>
         </ul>
+        <a class="price-cta" href="#inquiry">Request a quote →</a>
       </div>
       <div class="price-card">
         <div class="price-tier">Private — Luxury</div>
-        <div class="price-amount">€509<sup>/pers.</sup></div>
-        <div class="price-unit">from, per person</div>
         <ul>
           <li>Private vehicle, curated stops</li>
           <li>Luxury ensuite tents throughout</li>
           <li>Sandboarding &amp; quad-bike add-ons</li>
         </ul>
+        <a class="price-cta" href="#inquiry">Request a quote →</a>
       </div>
     </div>
-    <p class="price-note">Prices are indicative, in line with typical rates for this route — replace with your real costs once you've priced fuel, guides, and accommodation. Per-person price drops as group size grows; solo travelers pay a single-traveler supplement.</p>
-    <p class="currency-note">Prices shown in Euros, or the equivalent in your own currency — ask your bank or card provider for the current rate.</p>
+    <p class="price-note">Exact pricing depends on your dates, group size and camp tier — request a quote and we'll send a real number, not just a range.</p>
   </div>
 </section>
 

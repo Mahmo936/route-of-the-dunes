@@ -23,15 +23,13 @@
       "@type": "TouristTrip",
       "name": "Boucle Marrakech ⇄ Merzouga",
       "description": "Circuit de 3 jours et 2 nuits, privé ou partagé, de Marrakech à Erg Chebbi via Aït Ben Haddou, Ouarzazate, la vallée du Dadès et les gorges du Todra.",
-      "touristType": ["Famille", "Couples", "Voyageurs seuls", "Groupes"],
-      "offers": { "@type": "Offer", "priceCurrency": "EUR", "price": "120", "description": "À partir de, par personne, circuit en groupe partagé" }
+      "touristType": ["Famille", "Couples", "Voyageurs seuls", "Groupes"]
     },
     {
       "@type": "TouristTrip",
       "name": "Fès à Marrakech via le Sahara",
       "description": "Traversée d'un sens, 5 jours et 4 nuits, de Fès à Marrakech via Ifrane, la forêt de cèdres d'Azrou, la vallée du Ziz, Erg Chebbi, les gorges du Todra et la vallée du Dadès.",
-      "touristType": ["Famille", "Couples", "Voyageurs seuls", "Groupes"],
-      "offers": { "@type": "Offer", "priceCurrency": "EUR", "price": "280", "description": "À partir de, par personne, circuit en groupe partagé" }
+      "touristType": ["Famille", "Couples", "Voyageurs seuls", "Groupes"]
     }
   ]
 }
@@ -275,6 +273,8 @@
   .price-card ul{list-style:none; font-size:0.9rem; color:#4f473a; display:grid; gap:9px; margin-bottom:8px;}
   .price-card li{padding-left:16px; position:relative;}
   .price-card li::before{content:"—"; position:absolute; left:0; color:var(--ochre);}
+  .price-cta{display:inline-block; margin-top:14px; font-size:0.92rem; color:var(--rust); text-decoration:none; border-bottom:1px solid var(--rust); padding-bottom:2px; transition:opacity .15s ease;}
+  .price-cta:hover{opacity:0.7;}
   .price-note{font-size:0.84rem; color:#7a705c; margin-top:36px; max-width:60ch;}
   .currency-note{font-size:0.82rem; color:#8a8067; margin-top:14px;}
   .activities{background:var(--night); color:var(--cream);}
@@ -722,7 +722,7 @@
         <span class="tag">Ce que ça coûte</span>
         <h2>Trois façons de faire le même circuit.</h2>
       </div>
-      <p class="sub">Par personne, pour un petit groupe de 4 à 6 voyageurs. Voyageurs seuls et groupes plus larges reçoivent un devis ajusté — prix final confirmé une fois vos dates connues.</p>
+      <p class="sub">Même circuit, trois niveaux de confort — demandez un devis et nous vous enverrons un prix réel selon vos dates et la taille de votre groupe.</p>
     </div>
 
     <div class="trust-badges">
@@ -735,34 +735,31 @@
     <div class="price-grid">
       <div class="price-card">
         <div class="price-tier">Groupe partagé</div>
-        <div class="price-amount">120€<sup>/pers.</sup></div>
-        <div class="price-unit">à partir de, par personne</div>
         <ul>
           <li>Minibus partagé, jusqu'à 16 voyageurs</li>
           <li>Camp standard, sanitaires partagés</li>
           <li>Balade à chameau au coucher du soleil, 2 nuits en demi-pension</li>
         </ul>
+        <a class="price-cta" href="#inquiry">Demander un devis →</a>
       </div>
       <div class="price-card featured">
         <span class="featured-flag">Le plus réservé</span>
         <div class="price-tier">Privé — Standard</div>
-        <div class="price-amount">175€<sup>/pers.</sup></div>
-        <div class="price-unit">à partir de, par personne</div>
         <ul>
           <li>4×4 privé avec chauffeur-guide</li>
           <li>Camp standard ou deluxe</li>
           <li>Arrêts et rythme entièrement flexibles</li>
         </ul>
+        <a class="price-cta" href="#inquiry">Demander un devis →</a>
       </div>
       <div class="price-card">
         <div class="price-tier">Privé — Luxe</div>
-        <div class="price-amount">245€<sup>/pers.</sup></div>
-        <div class="price-unit">à partir de, par personne</div>
         <ul>
           <li>Véhicule privé, arrêts prioritaires</li>
           <li>Tente de luxe avec salle de bain privée, douche chaude</li>
           <li>Options sandboard et quad</li>
         </ul>
+        <a class="price-cta" href="#inquiry">Demander un devis →</a>
       </div>
     </div>
 
@@ -770,38 +767,34 @@
     <div class="price-grid">
       <div class="price-card">
         <div class="price-tier">Groupe partagé</div>
-        <div class="price-amount">280€<sup>/pers.</sup></div>
-        <div class="price-unit">à partir de, par personne</div>
         <ul>
           <li>Minibus partagé, jusqu'à 16 voyageurs</li>
           <li>Camp standard, sanitaires partagés</li>
           <li>2 nuits près des dunes, en demi-pension</li>
         </ul>
+        <a class="price-cta" href="#inquiry">Demander un devis →</a>
       </div>
       <div class="price-card featured">
         <span class="featured-flag">Le plus réservé</span>
         <div class="price-tier">Privé — Standard</div>
-        <div class="price-amount">380€<sup>/pers.</sup></div>
-        <div class="price-unit">à partir de, par personne</div>
         <ul>
           <li>4×4 privé avec chauffeur-guide</li>
           <li>Camp standard ou deluxe</li>
           <li>Rythme plus tranquille, plus de temps dans les gorges</li>
         </ul>
+        <a class="price-cta" href="#inquiry">Demander un devis →</a>
       </div>
       <div class="price-card">
         <div class="price-tier">Privé — Luxe</div>
-        <div class="price-amount">520€<sup>/pers.</sup></div>
-        <div class="price-unit">à partir de, par personne</div>
         <ul>
           <li>Véhicule privé, arrêts sélectionnés</li>
           <li>Tentes de luxe avec salle de bain tout au long du circuit</li>
           <li>Options sandboard et quad</li>
         </ul>
+        <a class="price-cta" href="#inquiry">Demander un devis →</a>
       </div>
     </div>
-    <p class="price-note">Les prix sont indicatifs, en ligne avec les tarifs habituels pour ce circuit — à remplacer par vos coûts réels une fois le carburant, les guides et l'hébergement chiffrés. Le prix par personne baisse avec la taille du groupe ; les voyageurs seuls paient un supplément individuel.</p>
-    <p class="currency-note">Prix affichés en euros, ou l'équivalent dans votre devise — renseignez-vous auprès de votre banque pour le taux actuel.</p>
+    <p class="price-note">Le prix exact dépend de vos dates, de la taille du groupe et du niveau de camp — demandez un devis et nous vous enverrons un prix réel, pas juste une fourchette.</p>
   </div>
 </section>
 
