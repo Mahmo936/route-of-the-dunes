@@ -203,6 +203,16 @@
   .route-days .u{font-size:0.85rem; color:#7a705c;}
   .route-card h3{font-size:1.3rem; margin-bottom:10px;}
   .route-card p{color:#4f473a; font-size:0.96rem; margin-bottom:18px;}
+  .custom-tour-banner{
+    margin-top:24px;
+    border:1px dashed #c9bb95;
+    padding:32px 30px;
+    display:flex; justify-content:space-between; align-items:center; gap:24px; flex-wrap:wrap;
+  }
+  .custom-tour-banner h3{font-size:1.15rem; margin-bottom:8px;}
+  .custom-tour-banner p{color:#5a5142; font-size:0.95rem; max-width:52ch;}
+  .custom-tour-banner .btn{white-space:nowrap; background:var(--rust); color:var(--cream); transition:transform .15s ease, box-shadow .15s ease;}
+  .custom-tour-banner .btn:hover{transform:translateY(-2px); box-shadow:0 8px 20px -8px rgba(156,74,46,0.5);}
   .route-stops{
     display:flex; flex-wrap:wrap; gap:6px 0; font-size:0.86rem; color:#7a705c; margin-bottom:20px;
   }
@@ -526,6 +536,13 @@
         <p>Une traversée du pays dans un sens, à un rythme plus tranquille : la "Suisse marocaine" à Ifrane, les macaques de Barbarie dans la forêt de cèdres d'Azrou, une balade à chameau jusqu'au cœur de l'Erg Chebbi avec une soirée musique berbère, deux nuits aux dunes, puis un retour plus posé par Todra et Dadès jusqu'à Marrakech.</p>
         <a class="route-link" href="#itinerary-5day">Voir le programme jour par jour</a>
       </div>
+    </div>
+    <div class="custom-tour-banner">
+      <div>
+        <h3>Vous ne trouvez pas ce que vous cherchez ?</h3>
+        <p>Les deux circuits ci-dessus sont des modèles de départ, pas les seules options — dites-nous vos dates, vos centres d'intérêt et votre rythme, et nous construirons un itinéraire sur mesure, d'une simple excursion d'une journée à une traversée plus longue entre plusieurs villes.</p>
+      </div>
+      <a class="btn" href="#inquiry">Demander un circuit sur mesure →</a>
     </div>
   </div>
 </section>
@@ -1055,6 +1072,7 @@
             <select id="f-route" name="route">
               <option>Boucle Marrakech ⇄ Merzouga — 3 jours</option>
               <option>Fès → Marrakech via le Sahara — 5 jours</option>
+              <option>Circuit sur mesure</option>
               <option>Pas encore sûr</option>
             </select>
           </div>

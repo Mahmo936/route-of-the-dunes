@@ -229,6 +229,16 @@
   .route-days .u{font-size:0.85rem; color:#7a705c;}
   .route-card h3{font-size:1.3rem; margin-bottom:10px;}
   .route-card p{color:#4f473a; font-size:0.96rem; margin-bottom:18px;}
+  .custom-tour-banner{
+    margin-top:24px;
+    border:1px dashed #c9bb95;
+    padding:32px 30px;
+    display:flex; justify-content:space-between; align-items:center; gap:24px; flex-wrap:wrap;
+  }
+  .custom-tour-banner h3{font-size:1.15rem; margin-bottom:8px;}
+  .custom-tour-banner p{color:#5a5142; font-size:0.95rem; max-width:52ch;}
+  .custom-tour-banner .btn{white-space:nowrap; background:var(--rust); color:var(--cream); transition:transform .15s ease, box-shadow .15s ease;}
+  .custom-tour-banner .btn:hover{transform:translateY(-2px); box-shadow:0 8px 20px -8px rgba(156,74,46,0.5);}
   .route-stops{
     display:flex; flex-wrap:wrap; gap:6px 0; font-size:0.86rem; color:#7a705c; margin-bottom:20px;
   }
@@ -603,6 +613,13 @@
         <p>A one-way crossing of the country at a relaxed pace: the "Switzerland of Morocco" at Ifrane, Barbary macaques in the Azrou cedar forest, a camel ride to the heart of Erg Chebbi with a Berber music evening, two nights at the dunes, then a slower return through Todra and Dadès to finish in Marrakesh.</p>
         <a class="route-link" href="#itinerary-5day">View day by day</a>
       </div>
+    </div>
+    <div class="custom-tour-banner">
+      <div>
+        <h3>Don't see what you're looking for?</h3>
+        <p>Both routes above are starting templates, not the only options — tell us your dates, interests and pace, and we'll build a custom itinerary around them, from a quick day trip to a longer multi-city crossing.</p>
+      </div>
+      <a class="btn" href="#inquiry">Request a custom tour →</a>
     </div>
   </div>
 </section>
@@ -1134,6 +1151,7 @@
             <select id="f-route" name="route">
               <option>Marrakesh ⇄ Merzouga Loop — 3 days</option>
               <option>Fes → Marrakesh via the Sahara — 5 days</option>
+              <option>Custom / tailor-made itinerary</option>
               <option>Not sure yet</option>
             </select>
           </div>
