@@ -5,7 +5,7 @@
 ## Core routes
 
 - [Homepage](https://routeofthedunes.com/): routes, itineraries, pricing tiers, and booking
-- [Version française](https://routeofthedunes.com/index-fr.html): the full site in French
+- [Version française](https://routeofthedunes.com/index-fr): the full site in French
 - [3-Day Marrakesh Desert Tour](https://routeofthedunes.com/#itinerary-3day): Marrakesh → Atlas → Erg Chebbi → Marrakesh loop
 - [5-Day Fes to Marrakesh Crossing](https://routeofthedunes.com/#itinerary-5day): the full route through the dunes and kasbahs
 - [Pricing Tiers](https://routeofthedunes.com/#pricing): shared group vs private standard vs private luxury
@@ -13,46 +13,46 @@
 
 ## Journal index
 
-- [All planning guides](https://routeofthedunes.com/journal.html): the complete journal with category filters
+- [All planning guides](https://routeofthedunes.com/journal): the complete journal with category filters
 
 ## Planning guides
 
-- [3 Days vs 5 Days](https://routeofthedunes.com/blog-3days-vs-5days.html): choosing the right tour length
-- [Desert Tour Cost](https://routeofthedunes.com/blog-desert-tour-cost.html): what trips really cost
-- [Private vs Shared](https://routeofthedunes.com/blog-private-vs-shared.html): which tour type fits you (also in [French](https://routeofthedunes.com/blog-private-vs-shared-fr.html))
-- [Erg Chebbi vs Erg Chigaga](https://routeofthedunes.com/blog-erg-chebbi-vs-chigaga.html): comparing the two dune seas
-- [Best Time of Year](https://routeofthedunes.com/blog-best-time-of-year.html): weather and seasonality
-- [What to Wear](https://routeofthedunes.com/blog-what-to-wear.html): desert clothing guide
-- [Packing Checklist](https://routeofthedunes.com/blog-packing-checklist.html): full packing list
-- [Is Morocco Safe?](https://routeofthedunes.com/blog-is-morocco-safe.html): safety overview for travelers
-- [Solo Female Safety](https://routeofthedunes.com/blog-solo-female-safety.html): practical notes for solo women travelers
-- [Desert Tour with Young Kids](https://routeofthedunes.com/blog-young-kids.html): family suitability guide
-- [Camel Trekking Ethics](https://routeofthedunes.com/blog-camel-trekking-ethics.html): animal welfare at the camps
-- [Avoid Tour Scams](https://routeofthedunes.com/blog-avoid-tour-scams.html): common scams and how to book safely
-- [One Night Enough?](https://routeofthedunes.com/blog-one-night-enough.html): short desert visits explained
-- [Desert Camp Night](https://routeofthedunes.com/blog-desert-camp-night.html): what a night in camp is like
-- [Camp Tier Comparison](https://routeofthedunes.com/blog-camp-tier-comparison.html): standard vs luxury camps
-- [Motion Sickness on the Tizi n'Tichka Pass: A Practical Guide](https://routeofthedunes.com/blog-managing-motion-sickness-tichka-pass.html): How to handle car sickness on the winding Atlas mountain roads between Marrakesh
-- [Roadside Dining & Food Hygiene: Marrakesh to Merzouga](https://routeofthedunes.com/blog-roadside-dining-and-food-hygiene-marrakesh-to-merzouga.html): A practical guide to roadside dining, food safety, and restaurant stops along th
-- [Navigating Marrakech Airport to Your Riad Without Scams](https://routeofthedunes.com/blog-marrakech-airport-to-riad-arrival-guide.html): A calm, practical guide to landing at Marrakech Menara Airport, getting a fair t
-- [Eating in the Sahara: Dietary Needs and Food Safety](https://routeofthedunes.com/blog-dietary-restrictions-sahara-desert.html): A practical guide to managing food allergies, vegetarian diets, and food safety 
-- [Sahara Tours for Less Active Travelers: What to Expect](https://routeofthedunes.com/blog-physical-demands-sahara-desert-tour.html): A realistic look at the physical demands of long drives, camel riding, and dune 
-- [Tipping on Morocco Desert Tours: A Practical Guide](https://routeofthedunes.com/blog-morocco-desert-tour-tipping-guide.html): A straightforward, honest guide to tipping drivers, guides, and camp staff on Sa
-- [Navigating Medinas with Luggage Before Your Desert Tour](https://routeofthedunes.com/blog-medina-luggage-pickup-guide.html): Practical advice on handling bags in Marrakech and Fes medinas before your Sahar
-- [Sahara Luggage Storage: What to Bring & Leave Behind](https://routeofthedunes.com/blog-luggage-storage-sahara-desert-packing.html): Practical guide on what to pack in your daypack versus main bags when transferri
-- [Marrakech to Merzouga: Bus vs Guided Tour vs Self-Drive](https://routeofthedunes.com/blog-marrakech-to-merzouga-bus-vs-tour-vs-self-drive.html): An honest look at costs, timings, missed sights, and trade-offs for getting from
-- [7 Questions to Ask Before Booking a Sahara Desert Tour](https://routeofthedunes.com/blog-questions-before-booking-sahara-tour.html): Ask these 7 essential questions before booking a Sahara desert tour to clarify c
-- [Merzouga vs Zagora: Choosing the Right Sahara Trip](https://routeofthedunes.com/blog-merzouga-vs-zagora-desert.html): An honest comparison of Erg Chebbi (Merzouga) and Zagora. Compare drive times, d
-- [Sunrise vs Sunset](https://routeofthedunes.com/blog-sunrise-vs-sunset.html): which golden hour deserves your alarm clock
-- [Photograph the Stars](https://routeofthedunes.com/blog-photograph-stars.html): night-sky photography in the desert
-- [Marrakesh vs Fes Start](https://routeofthedunes.com/blog-marrakesh-vs-fes-start.html): which departure city to choose
-- [Vegetarian Meals](https://routeofthedunes.com/blog-vegetarian-meals.html): dietary needs on tour
-- [Sandboarding](https://routeofthedunes.com/blog-sandboarding.html): dune sandboarding guide
-- [Camel, Quad & Buggy](https://routeofthedunes.com/blog-camel-quad-buggy.html): activities comparison
-- [Ait Ben Haddou](https://routeofthedunes.com/blog-ait-ben-haddou.html): the kasbah on the route
-- [Chefchaouen Blue City](https://routeofthedunes.com/blog-chefchaouen-blue-city.html): extending the trip north
-- [Things to Do in Marrakech](https://routeofthedunes.com/blog-things-to-do-marrakech.html): before or after the tour
-- [Khamlia Gnawa Music](https://routeofthedunes.com/blog-khamlia-gnawa-music.html): culture stop near the dunes
-- [No Camel Tour](https://routeofthedunes.com/blog-no-camel-tour.html): desert trips without camels
-- [Desert Tour for Couples](https://routeofthedunes.com/blog-desert-tour-couples.html): romantic desert options
-- [How Many Days in Morocco](https://routeofthedunes.com/blog-how-many-days-morocco.html): trip length planning
+- [3 Days vs 5 Days](https://routeofthedunes.com/blog-3days-vs-5days): choosing the right tour length
+- [Desert Tour Cost](https://routeofthedunes.com/blog-desert-tour-cost): what trips really cost
+- [Private vs Shared](https://routeofthedunes.com/blog-private-vs-shared): which tour type fits you (also in [French](https://routeofthedunes.com/blog-private-vs-shared-fr))
+- [Erg Chebbi vs Erg Chigaga](https://routeofthedunes.com/blog-erg-chebbi-vs-chigaga): comparing the two dune seas
+- [Best Time of Year](https://routeofthedunes.com/blog-best-time-of-year): weather and seasonality
+- [What to Wear](https://routeofthedunes.com/blog-what-to-wear): desert clothing guide
+- [Packing Checklist](https://routeofthedunes.com/blog-packing-checklist): full packing list
+- [Is Morocco Safe?](https://routeofthedunes.com/blog-is-morocco-safe): safety overview for travelers
+- [Solo Female Safety](https://routeofthedunes.com/blog-solo-female-safety): practical notes for solo women travelers
+- [Desert Tour with Young Kids](https://routeofthedunes.com/blog-young-kids): family suitability guide
+- [Camel Trekking Ethics](https://routeofthedunes.com/blog-camel-trekking-ethics): animal welfare at the camps
+- [Avoid Tour Scams](https://routeofthedunes.com/blog-avoid-tour-scams): common scams and how to book safely
+- [One Night Enough?](https://routeofthedunes.com/blog-one-night-enough): short desert visits explained
+- [Desert Camp Night](https://routeofthedunes.com/blog-desert-camp-night): what a night in camp is like
+- [Camp Tier Comparison](https://routeofthedunes.com/blog-camp-tier-comparison): standard vs luxury camps
+- [Motion Sickness on the Tizi n'Tichka Pass: A Practical Guide](https://routeofthedunes.com/blog-managing-motion-sickness-tichka-pass): How to handle car sickness on the winding Atlas mountain roads between Marrakesh
+- [Roadside Dining & Food Hygiene: Marrakesh to Merzouga](https://routeofthedunes.com/blog-roadside-dining-and-food-hygiene-marrakesh-to-merzouga): A practical guide to roadside dining, food safety, and restaurant stops along th
+- [Navigating Marrakech Airport to Your Riad Without Scams](https://routeofthedunes.com/blog-marrakech-airport-to-riad-arrival-guide): A calm, practical guide to landing at Marrakech Menara Airport, getting a fair t
+- [Eating in the Sahara: Dietary Needs and Food Safety](https://routeofthedunes.com/blog-dietary-restrictions-sahara-desert): A practical guide to managing food allergies, vegetarian diets, and food safety 
+- [Sahara Tours for Less Active Travelers: What to Expect](https://routeofthedunes.com/blog-physical-demands-sahara-desert-tour): A realistic look at the physical demands of long drives, camel riding, and dune 
+- [Tipping on Morocco Desert Tours: A Practical Guide](https://routeofthedunes.com/blog-morocco-desert-tour-tipping-guide): A straightforward, honest guide to tipping drivers, guides, and camp staff on Sa
+- [Navigating Medinas with Luggage Before Your Desert Tour](https://routeofthedunes.com/blog-medina-luggage-pickup-guide): Practical advice on handling bags in Marrakech and Fes medinas before your Sahar
+- [Sahara Luggage Storage: What to Bring & Leave Behind](https://routeofthedunes.com/blog-luggage-storage-sahara-desert-packing): Practical guide on what to pack in your daypack versus main bags when transferri
+- [Marrakech to Merzouga: Bus vs Guided Tour vs Self-Drive](https://routeofthedunes.com/blog-marrakech-to-merzouga-bus-vs-tour-vs-self-drive): An honest look at costs, timings, missed sights, and trade-offs for getting from
+- [7 Questions to Ask Before Booking a Sahara Desert Tour](https://routeofthedunes.com/blog-questions-before-booking-sahara-tour): Ask these 7 essential questions before booking a Sahara desert tour to clarify c
+- [Merzouga vs Zagora: Choosing the Right Sahara Trip](https://routeofthedunes.com/blog-merzouga-vs-zagora-desert): An honest comparison of Erg Chebbi (Merzouga) and Zagora. Compare drive times, d
+- [Sunrise vs Sunset](https://routeofthedunes.com/blog-sunrise-vs-sunset): which golden hour deserves your alarm clock
+- [Photograph the Stars](https://routeofthedunes.com/blog-photograph-stars): night-sky photography in the desert
+- [Marrakesh vs Fes Start](https://routeofthedunes.com/blog-marrakesh-vs-fes-start): which departure city to choose
+- [Vegetarian Meals](https://routeofthedunes.com/blog-vegetarian-meals): dietary needs on tour
+- [Sandboarding](https://routeofthedunes.com/blog-sandboarding): dune sandboarding guide
+- [Camel, Quad & Buggy](https://routeofthedunes.com/blog-camel-quad-buggy): activities comparison
+- [Ait Ben Haddou](https://routeofthedunes.com/blog-ait-ben-haddou): the kasbah on the route
+- [Chefchaouen Blue City](https://routeofthedunes.com/blog-chefchaouen-blue-city): extending the trip north
+- [Things to Do in Marrakech](https://routeofthedunes.com/blog-things-to-do-marrakech): before or after the tour
+- [Khamlia Gnawa Music](https://routeofthedunes.com/blog-khamlia-gnawa-music): culture stop near the dunes
+- [No Camel Tour](https://routeofthedunes.com/blog-no-camel-tour): desert trips without camels
+- [Desert Tour for Couples](https://routeofthedunes.com/blog-desert-tour-couples): romantic desert options
+- [How Many Days in Morocco](https://routeofthedunes.com/blog-how-many-days-morocco): trip length planning
