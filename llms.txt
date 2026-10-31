@@ -1,6 +1,6 @@
 # Route of the Dunes
 
-> Route of the Dunes (routeofthedunes.com) is a small-group and private Sahara desert tour operator running trips from Marrakesh and Fes to Erg Chebbi (Merzouga). The site offers a 3-day Marrakesh loop and a 5-day Fes-to-Marrakesh crossing, with shared, standard private, and luxury private pricing tiers, plus a Journal of 27+ first-hand planning guides (costs, packing, safety, camp comparisons, itineraries) and a full French version of the site. Booking is by inquiry form, WhatsApp, or email — quotes are custom, no instant checkout.
+> Route of the Dunes (routeofthedunes.com) is a small-group and private Sahara desert tour operator running trips from Marrakesh and Fes to Erg Chebbi (Merzouga). The site offers a 3-day Marrakesh loop and a 5-day Fes-to-Marrakesh crossing, with shared, standard private, and luxury private pricing tiers, plus a Journal of 40+ first-hand planning guides (costs, packing, safety, camp comparisons, itineraries) and a full French version of the site. Booking is by inquiry form, WhatsApp, or email — quotes are custom, no instant checkout.
 
 ## Core routes
 
@@ -32,12 +32,12 @@
 - [One Night Enough?](https://routeofthedunes.com/blog-one-night-enough): short desert visits explained
 - [Desert Camp Night](https://routeofthedunes.com/blog-desert-camp-night): what a night in camp is like
 - [Camp Tier Comparison](https://routeofthedunes.com/blog-camp-tier-comparison): standard vs luxury camps
-- [Motion Sickness on the Tizi n'Tichka Pass: A Practical Guide](https://routeofthedunes.com/blog-managing-motion-sickness-tichka-pass): How to handle car sickness on the winding Atlas mountain roads between Marrakesh
-- [Roadside Dining & Food Hygiene: Marrakesh to Merzouga](https://routeofthedunes.com/blog-roadside-dining-and-food-hygiene-marrakesh-to-merzouga): A practical guide to roadside dining, food safety, and restaurant stops along th
-- [Navigating Marrakech Airport to Your Riad Without Scams](https://routeofthedunes.com/blog-marrakech-airport-to-riad-arrival-guide): A calm, practical guide to landing at Marrakech Menara Airport, getting a fair t
+- [Motion Sickness on the Tichka Pass](https://routeofthedunes.com/blog-managing-motion-sickness-tichka-pass): How to handle car sickness on the Tizi n'Tichka pass between Marrakesh and Merzouga: seating, timing, medication, and when to ask the driver to stop.
+- [Roadside Food: Marrakesh to Merzouga](https://routeofthedunes.com/blog-roadside-dining-and-food-hygiene-marrakesh-to-merzouga): An honest guide to roadside dining between Marrakesh and Merzouga: tour stops versus local grills, water and ice, dietary needs, and a smart snack kit.
+- [Marrakech Airport to Your Riad](https://routeofthedunes.com/blog-marrakech-airport-to-riad-arrival-guide): A calm, practical guide to Marrakech Menara Airport: the taxi kiosk, riad transfers, cash and SIM cards, and the medina scams to ignore.
 - [Eating in the Sahara: Dietary Needs and Food Safety](https://routeofthedunes.com/blog-dietary-restrictions-sahara-desert): A practical guide to managing food allergies, vegetarian diets, and food safety 
 - [Sahara Tours for Less Active Travelers: What to Expect](https://routeofthedunes.com/blog-physical-demands-sahara-desert-tour): A realistic look at the physical demands of long drives, camel riding, and dune 
-- [Tipping on Morocco Desert Tours: A Practical Guide](https://routeofthedunes.com/blog-morocco-desert-tour-tipping-guide): A straightforward, honest guide to tipping drivers, guides, and camp staff on Sa
+- [Cash, ATMs, and Tipping in Morocco](https://routeofthedunes.com/blog-morocco-desert-tour-tipping-guide): A practical guide to cash and tipping on a Morocco desert tour: ATM reliability, daily budgets, card surcharges, and fair gratuity amounts.
 - [Navigating Medinas with Luggage Before Your Desert Tour](https://routeofthedunes.com/blog-medina-luggage-pickup-guide): Practical advice on handling bags in Marrakech and Fes medinas before your Sahar
 - [Sahara Luggage Storage: What to Bring & Leave Behind](https://routeofthedunes.com/blog-luggage-storage-sahara-desert-packing): Practical guide on what to pack in your daypack versus main bags when transferri
 - [Marrakech to Merzouga: Bus vs Guided Tour vs Self-Drive](https://routeofthedunes.com/blog-marrakech-to-merzouga-bus-vs-tour-vs-self-drive): An honest look at costs, timings, missed sights, and trade-offs for getting from
@@ -56,3 +56,12 @@
 - [No Camel Tour](https://routeofthedunes.com/blog-no-camel-tour): desert trips without camels
 - [Desert Tour for Couples](https://routeofthedunes.com/blog-desert-tour-couples): romantic desert options
 - [How Many Days in Morocco](https://routeofthedunes.com/blog-how-many-days-morocco): trip length planning
+- [Sahara Desert Tour Hidden Costs](https://routeofthedunes.com/blog-hidden-costs-sahara-desert-tour): A transparent breakdown of what standard Sahara desert tour quotes leave out: roadside lunches, water, local guides, quad upgrades, and tips.
+- [Marrakesh Riad Pickup: Meeting Your Private Desert Driver](https://routeofthedunes.com/blog-marrakesh-riad-pickup-logistics): Exact logistics for how and where your private Sahara desert driver meets...
+- [Cell Service and Wi-Fi in the Sahara: What Works](https://routeofthedunes.com/blog-cell-service-wifi-sahara-desert): What actually works for cell coverage, Wi-Fi, and charging in Merzouga and...
+- [What Happens When a Desert Tour Vehicle Breaks Down?](https://routeofthedunes.com/blog-desert-tour-vehicle-breakdowns): A realistic look at mechanical failures on remote Morocco desert roads, how...
+- [Driving Fes to Merzouga: Passes, Checkpoints, and Fuel](https://routeofthedunes.com/blog-fes-to-merzouga-road-trip-safety): Practical safety notes for driving from Fes to Merzouga via the Middle...
+- [Atlas Mountains in Winter: Tichka Pass Snow & Your Itinerary](https://routeofthedunes.com/blog-tichka-pass-winter-snow-desert-itinerary): How winter snow on the Tichka Pass impacts your Marrakesh to Merzouga desert...
+- [Van vs 4x4 for Sahara Desert Tours: Vehicle Comparison](https://routeofthedunes.com/blog-van-vs-4x4-sahara-desert-tour): An honest comparison of AC minibuses versus Toyota 4x4s for driving from...
+- [Marrakesh to Merzouga with Kids and Elderly Relatives](https://routeofthedunes.com/blog-marrakesh-to-merzouga-with-kids-and-elderly): Practical advice for handling long desert drives from Marrakesh with...
+- [Sahara Desert Tours with Teens: Keeping Them Engaged](https://routeofthedunes.com/blog-sahara-desert-route-with-teenagers): Practical advice for traveling the Marrakesh-to-Merzouga route with...
