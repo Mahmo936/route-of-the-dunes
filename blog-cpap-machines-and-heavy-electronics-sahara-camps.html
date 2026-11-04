@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X52EX3YTQ0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-X52EX3YTQ0');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CPAP Machines &amp; Power at Erg Chebbi Desert Camps | Route of the Dunes</title>
+<link rel="canonical" href="https://routeofthedunes.com/blog-cpap-machines-and-heavy-electronics-sahara-camps">
+<meta name="description" content="How desert camp power systems, voltage, generators, and battery backups handle CPAP machines and heavy electronics at Erg Chebbi.">
+<meta property="og:title" content="CPAP Machines &amp; Power at Erg Chebbi Desert Camps | Route of the Dunes">
+<meta property="og:description" content="How desert camp power systems, voltage, generators, and battery backups handle CPAP machines and heavy electronics at Erg Chebbi.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://routeofthedunes.com/blog-cpap-machines-and-heavy-electronics-sahara-camps">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --night:#182338; --night-2:#233252;
+    --ochre:#c6883a; --ochre-2:#e0a75a;
+    --rust:#9c4a2e; --sand:#ece1c6; --cream:#f8f3e6; --ink:#211a12;
+    --line: rgba(248,243,230,0.18);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:'Work Sans', sans-serif; background:var(--cream); color:var(--ink); line-height:1.6;}
+  a:focus-visible, button:focus-visible{outline:2px solid var(--ochre-2); outline-offset:2px;}
+  h1,h2,h3,.display{font-family:'Spectral', serif; font-weight:500; letter-spacing:-0.01em;}
+  a{color:var(--rust);}
+  .wrap{max-width:720px; margin:0 auto; padding:0 24px;}
+  header{background:var(--night); color:var(--cream); padding:18px 0; border-bottom:1px solid var(--line);}
+  .navbar{max-width:1120px; margin:0 auto; padding:0 28px; display:flex; justify-content:space-between; align-items:center;}
+  .brand{font-family:'Spectral', serif; font-size:1.2rem;}
+  .brand .dot{color:var(--ochre-2);}
+  .backlink{color:rgba(248,243,230,0.8); font-size:0.88rem; text-decoration:none;}
+  .art-header{padding:60px 0 30px; border-bottom:1px solid #d8c99e;}
+  .cat{color:var(--rust); font-size:0.86rem; margin-bottom:14px; display:block;}
+  h1{font-size:clamp(1.8rem,4vw,2.5rem); line-height:1.15; margin-bottom:18px;}
+  .dek{font-size:1.1rem; color:#5a5142; max-width:56ch;}
+  .meta{margin-top:22px; font-size:0.85rem; color:#8a8067;}
+  article{padding:44px 0 80px; font-size:1.06rem;}
+  article h2{font-size:1.4rem; margin:40px 0 14px;}
+  article p{margin-bottom:18px; max-width:68ch;}
+  article ul, article ol{margin:0 0 20px 22px;}
+  article li{margin-bottom:8px; max-width:64ch;}
+  table.compare{width:100%; border-collapse:collapse; margin:24px 0 32px; font-size:0.94rem;}
+  table.compare th, table.compare td{text-align:left; padding:10px 12px; border-bottom:1px solid #d8c99e; vertical-align:top;}
+  table.compare th{font-family:'Spectral', serif; font-weight:500; color:var(--rust); font-size:0.98rem;}
+  .callout{background:var(--sand); border-left:3px solid var(--ochre); padding:18px 22px; margin:28px 0; font-size:0.98rem;}
+  .callout strong{color:var(--rust);}
+  .faq-block{margin:44px 0;}
+  .faq-block h2{margin-bottom:6px;}
+  .faq-block .faq-sub{font-size:0.92rem; color:#8a8067; margin-bottom:22px;}
+  .faq-item{margin-bottom:20px;}
+  .faq-item h3{font-family:'Work Sans',sans-serif; font-weight:600; font-size:1.02rem; margin-bottom:6px; color:var(--ink);}
+  .faq-item p{margin-bottom:0;}
+  .cta-box{background:var(--night); color:var(--cream); padding:34px 30px; margin-top:48px;}
+  .cta-box h3{color:var(--cream); font-size:1.25rem; margin-bottom:10px;}
+  .cta-box p{color:rgba(248,243,230,0.82); margin-bottom:20px;}
+  .btn{display:inline-block; background:var(--ochre-2); color:var(--night); padding:12px 24px; text-decoration:none; font-weight:600; font-size:0.95rem; margin-right:10px; transition:transform .15s ease, box-shadow .15s ease;}
+  .btn:hover{transform:translateY(-2px); box-shadow:0 8px 20px -8px rgba(224,167,90,0.5);}
+  .btn-outline{display:inline-block; border:1px solid rgba(248,243,230,0.4); color:var(--cream); padding:11px 22px; text-decoration:none; font-size:0.95rem; transition:border-color .15s ease, background .15s ease;}
+  .btn-outline:hover{border-color:var(--ochre-2); background:rgba(224,167,90,0.08);}
+  footer{background:var(--night); color:rgba(248,243,230,0.65); padding:34px 0; font-size:0.85rem; text-align:center;}
+  @media (max-width:600px){ .wrap{padding:0 20px;} table.compare{font-size:0.86rem;} }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "CPAP Machines & Power at Erg Chebbi Desert Camps",
+  "description": "How desert camp power systems, voltage, generators, and battery backups handle CPAP machines and heavy electronics at Erg Chebbi.",
+  "author": {
+    "@type": "Organization",
+    "name": "Route of the Dunes"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Route of the Dunes"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://routeofthedunes.com/blog-cpap-machines-and-heavy-electronics-sahara-camps"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://routeofthedunes.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Journal",
+      "item": "https://routeofthedunes.com/journal"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "CPAP Machines & Power at Erg Chebbi Desert Camps",
+      "item": "https://routeofthedunes.com/blog-cpap-machines-and-heavy-electronics-sahara-camps"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do desert camp tents have electrical outlets inside?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Luxury camps often have bedside lamps and charging outlets, but basic standard camps may only have charging points in the central communal dining tent. Check your specific camp tier before departure."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I plug my CPAP directly into a tent wall socket all night?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Usually no. Because camps turn off generators overnight to preserve silence in the desert, wall power typically cuts out around midnight, making a personal battery backup essential."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will desert dust damage my electronics?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fine sand can infiltrate ports and cooling fans. Keep gear zipped in padded cases and avoid leaving laptops exposed on tables during windy afternoons."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="navbar">
+    <div class="brand">Route of the <span class="dot">Dunes</span></div>
+    <a class="backlink" href="https://routeofthedunes.com/">← Back to routes</a>
+  </div>
+</header>
+
+<div class="art-header">
+  <div class="wrap">
+    <span class="cat">Planning</span>
+    <h1>CPAP Machines &amp; Power at Erg Chebbi Desert Camps</h1>
+    <p class="dek">If you rely on a CPAP or need to charge heavy gear in the Sahara, you need to understand how desert camp electricity actually runs.</p>
+    <div class="meta">6 min read · Planning</div>
+  </div>
+</div>
+
+<article>
+  <div class="wrap">
+
+    <!-- Illustration generated in-house (AI) -->
+    <img src="img/cpap-machines-and-heavy-electronics-sahara-camps-hero.jpg" alt="CPAP Machines &amp; Power at Erg Chebbi Desert Camps" loading="lazy" style="width:100%; max-width:720px; height:320px; object-fit:cover; border-radius:2px; margin:8px auto 0; display:block;">
+
+        <p>When travelers ask about electricity at our desert camp near Merzouga, they usually want to know if they can charge a phone or camera. But for a growing number of our guests, the question is clinical: how to run a CPAP machine through the night without grid power forty miles from the nearest town.</p>
+    <p>Most standard desert camps rely on a combination of diesel generators and solar battery banks. Power is rarely continuous twenty-four hours a day in every tent, and understanding the rhythm of camp electricity helps you plan your medical needs or heavy electronics charging without unexpected interruptions.</p>
+
+    <h2>How Desert Camp Power Systems Actually Work</h2>
+    <p>Erg Chebbi camps sit off the national electrical grid. Electricity is generated locally, typically via solar panels storing energy in large battery banks during the day, supplemented by diesel generators when demand spikes or when the sun is down.</p>
+    <p>During the day, solar inverters provide standard 220V Moroccan outlets (Type C and E) in the main dining tent for phones and camera batteries. However, generators are usually turned off late at night—often around midnight or 1:00 AM—to maintain the quiet atmosphere of the dunes, meaning circuits may go dead until morning.</p>
+    <ul>
+      <li>Standard voltage: 220V, 50Hz (European two-pin plugs)</li>
+      <li>Main power sources: Solar arrays + diesel generator backups</li>
+      <li>Quiet hours: Generators usually shut down overnight</li>
+    </ul>
+
+    <h2>Running a CPAP Machine in the Dunes</h2>
+    <p>If you use a CPAP machine for sleep apnea, a camp tent that loses power at midnight presents a clear problem. You cannot rely on standard wall sockets to keep a medical device running straight through until dawn.</p>
+    <p>The most reliable solution is bringing a dedicated portable power station (such as a Jackery, EcoFlow, or a specialized CPAP battery pack) that can run your specific machine for 8 hours without AC power. Alternatively, you must inform us well in advance so we can arrange continuous power or a private inverter setup in your tent.</p>
+    <ul>
+      <li>Wall power is unreliable overnight as generators turn off</li>
+      <li>Bring a dedicated portable medical battery backup</li>
+      <li>Notify your operator before arrival to discuss specific wattage needs</li>
+    </ul>
+
+    <h2>Laptops, Drones, and Heavy Electronics</h2>
+    <p>Content creators and professional photographers often carry laptops, multiple camera bodies, and drone batteries. While charging these during daylight hours in the dining tent is generally fine, delicate electronics are exposed to fine desert dust and fluctuating current.</p>
+    <p>Voltage drops can happen when heavy loads are placed on camp generators. We recommend using surge protectors and keeping equipment sealed in dust-proof cases when not actively charging.</p>
+    <ul>
+      <li>Charge heavy gear in the main dining tent during daylight</li>
+      <li>Fine sand and dust require specialized protective sleeves</li>
+      <li>Use surge-protecting power strips for sensitive laptops</li>
+    </ul>
+
+    <h2>Alternative Energy and What to Pack</h2>
+    <p>Aside from your CPAP battery, packing smart helps bridge the gap between city amenities and off-grid desert realities. A high-capacity power bank (20,000mAh or greater) easily handles phones and small tablets over a multi-day trip.</p>
+    <p>For more detailed preparation regarding luggage space and what else to bring along for your journey across the <a href="/blog-tichka-pass-winter-snow-desert-itinerary">Tichka Pass</a>, check our general <a href="/blog-packing-checklist">packing checklist</a>.</p>
+    <ul>
+      <li>Pack a high-capacity portable power bank for daily use</li>
+      <li>Bring extra dust caps and cleaning cloths for ports</li>
+      <li>Review our <a href="/blog-luggage-storage-sahara-desert-packing">luggage storage and packing guide</a> for more tips</li>
+    </ul>
+
+<table class="compare">
+      <tr><th></th><th>Device Type</th><th>Best Way to Power It</th></tr>
+      <tr><td><strong>CPAP Machine</strong></td><td>Medical sleep apnea device</td><td>Dedicated portable medical battery pack (or pre-arranged private inverter)</td></tr>
+      <tr><td><strong>Smartphones</strong></td><td>Standard communication</td><td>Standard camp outlets by day, personal power bank by night</td></tr>
+      <tr><td><strong>Laptops</strong></td><td>Work and editing</td><td>Charge in main dining tent during daylight generator/solar hours</td></tr>
+      <tr><td><strong>Camera Batteries</strong></td><td>Photography gear</td><td>Charge during the day; keep spares in a warm pocket at night</td></tr>
+      <tr><td><strong>Drones</strong></td><td>Aerial filming</td><td>Direct wall charge; note local Moroccan import/flight regulations</td></tr>
+    </table>
+
+    <div class="callout">
+      <strong>Medical Needs First.</strong> Always disclose CPAP or other medical power requirements during booking, not upon arrival at camp, so we can guarantee a stable power source.
+    </div>
+
+    <!-- Illustration generated in-house (AI) — not a photo of a real location -->
+    <img src="img/sunrise-vs-sunset-illustration.jpg" alt="Stylized illustration of the Sahara dunes" loading="lazy" style="width:100%; max-width:720px; height:320px; object-fit:cover; border-radius:2px; margin:8px auto 0; display:block;">
+    <p style="font-size:0.85rem; color:#8a8067; margin-top:6px;">Illustration, not a photograph — for the real thing, you'll have to stand on the ridge yourself.</p>
+
+    <div class="faq-block">
+      <h2>Quick answers</h2>
+      <p class="faq-sub">A few follow-up questions travelers ask about this.</p>
+      <div class="faq-item">
+        <h3>Do desert camp tents have electrical outlets inside?</h3>
+        <p>Luxury camps often have bedside lamps and charging outlets, but basic standard camps may only have charging points in the central communal dining tent. Check your specific camp tier before departure.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I plug my CPAP directly into a tent wall socket all night?</h3>
+        <p>Usually no. Because camps turn off generators overnight to preserve silence in the desert, wall power typically cuts out around midnight, making a personal battery backup essential.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Will desert dust damage my electronics?</h3>
+        <p>Fine sand can infiltrate ports and cooling fans. Keep gear zipped in padded cases and avoid leaving laptops exposed on tables during windy afternoons.</p>
+      </div>
+    </div>
+
+    <div class="cta-box">
+      <h3>Planning your own route?</h3>
+      <p>Tell us your dates and what matters to you — we'll answer with a straight recommendation, not a brochure.</p>
+      <a class="btn" href="https://routeofthedunes.com/#inquiry">Send an inquiry</a>
+      <a class="btn-outline" href="https://routeofthedunes.com/#itinerary">See the itineraries</a>
+    </div>
+
+  </div>
+</article>
+
+<footer>
+  Route of the Dunes — private desert tours from Marrakesh and Fes &middot; <a href="https://routeofthedunes.com/" style="color:rgba(248,243,230,0.75);">Back to routes</a>
+</footer>
+
+</body>
+</html>
