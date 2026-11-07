@@ -102,7 +102,7 @@
   <div class="wrap">
     <span class="tag">The Journal</span>
     <h1>Every guide, in one place.</h1>
-    <p>48 guides on planning, routes, activities, culture and comparisons for a Morocco desert trip — filter by topic or just scroll.</p>
+    <p><span id="jfCount">52</span> guides on planning, routes, activities, culture and comparisons for a Morocco desert trip — filter by topic or just scroll.</p>
   </div>
 </div>
 
@@ -124,6 +124,18 @@
       <button class="jf-tab" type="button" data-cat="Travelers">Travelers (1)</button>
     </div>
     <div class="blog-grid" id="jfGrid">
+      <div class="blog-card" data-cat="Experience">
+        <span class="blog-cat">Experience</span>
+        <h3>What to Expect from Berber Desert Camp Hospitality</h3>
+        <p>A realistic look at Erg Chebbi desert camp hospitality, including sleeping arrangements, communal meals, campfire drumming, and cultural etiquette.</p>
+        <a class="blog-link" href="blog-traditional-berber-desert-camp-hospitality.html">Read the guide</a>
+      </div>
+      <div class="blog-card" data-cat="Planning">
+        <span class="blog-cat">Planning</span>
+        <h3>Flying vs. Train: Marrakesh to Fes Logistics</h3>
+        <p>Compare comfort, speed, and baggage limits of flying versus taking the train between Marrakesh and Fes for your Morocco Sahara itinerary.</p>
+        <a class="blog-link" href="blog-flying-vs-train-marrakesh-to-fes.html">Read the guide</a>
+      </div>
       <div class="blog-card" data-cat="Planning">
         <span class="blog-cat">Planning</span>
         <h3>How Much Does a Morocco Desert Tour Actually Cost?</h3>
@@ -514,16 +526,28 @@
   (function(){
     var tabs = document.querySelectorAll('.jf-tab');
     var cards = document.querySelectorAll('#jfGrid .blog-card');
+    cards.forEach(function(card){
+      if (!card.dataset.cat) {
+        var label = card.querySelector('.blog-cat');
+        if (label) card.dataset.cat = label.textContent.trim();
+      }
+    });
     tabs.forEach(function(tab){
+      var cat = tab.dataset.cat;
+      var n = cat === 'all'
+        ? cards.length
+        : [].filter.call(cards, function(card){ return card.dataset.cat === cat; }).length;
+      tab.textContent = tab.textContent.replace(/\s*\(\d+\)\s*$/, '') + ' (' + n + ')';
       tab.addEventListener('click', function(){
         tabs.forEach(function(t){ t.classList.toggle('active', t === tab); });
-        var cat = tab.dataset.cat;
         cards.forEach(function(card){
           var show = (cat === 'all' || card.dataset.cat === cat);
           card.classList.toggle('jf-hidden', !show);
         });
       });
     });
+    var count = document.getElementById('jfCount');
+    if (count) count.textContent = cards.length;
   })();
 </script>
 

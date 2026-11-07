@@ -97,33 +97,41 @@
     border-bottom:1px solid var(--line);
   }
   .navbar{
-    display:flex; align-items:center; justify-content:space-between;
-    padding:18px 28px;
+    display:flex; align-items:center; justify-content:space-between; gap:24px;
+    padding:16px 28px;
     max-width:1120px; margin:0 auto;
   }
   .brand{
     font-family:'Spectral', serif;
-    font-size:1.3rem;
-    display:flex; align-items:baseline; gap:8px;
+    font-size:1.24rem;
+    display:flex; align-items:baseline; gap:6px;
+    white-space:nowrap;
   }
   .brand .dot{color:var(--ochre-2);}
   nav ul{
-    display:flex; gap:32px; list-style:none;
-    font-size:0.94rem;
+    display:flex; gap:22px; list-style:none;
+    font-size:0.88rem;
   }
-  nav a{text-decoration:none; opacity:0.86; transition:opacity .2s;}
+  nav li{white-space:nowrap;}
+  nav a{text-decoration:none; opacity:0.8; transition:opacity .2s;}
   nav a:hover{opacity:1;}
   .navcta{
     border:1px solid var(--ochre-2);
-    padding:9px 18px;
-    font-size:0.88rem;
+    padding:8px 16px;
+    font-size:0.86rem;
     border-radius:2px;
     text-decoration:none;
     white-space:nowrap;
     transition:background .15s ease, color .15s ease;
   }
   .navcta:hover{background:var(--ochre-2); color:var(--night);}
-  .navmenu{display:flex; align-items:center; gap:34px;}
+  .navmenu{display:flex; align-items:center; gap:22px;}
+  .lang-switch{
+    font-size:0.82rem; opacity:0.75; text-decoration:none;
+    border:1px solid rgba(248,243,230,0.3); border-radius:2px; padding:6px 10px;
+    transition:opacity .15s ease;
+  }
+  .lang-switch:hover{opacity:1;}
 
   /* ---------- HERO ---------- */
   .hero{
@@ -150,12 +158,13 @@
     letter-spacing:0.02em;
   }
   .hero h1{
-    font-size:clamp(2.5rem, 5.2vw, 3.8rem);
-    line-height:1.06;
-    max-width:12ch;
+    font-size:clamp(2.2rem, 4.1vw, 3.15rem);
+    line-height:1.1;
+    max-width:19ch;
+    letter-spacing:-0.015em;
   }
   .hero p.lede{
-    margin-top:24px; font-size:1.1rem; max-width:46ch; color:rgba(248,243,230,0.86);
+    margin-top:22px; font-size:1.05rem; max-width:44ch; color:rgba(248,243,230,0.82);
   }
   .hero-actions{margin-top:38px; display:flex; gap:16px; flex-wrap:wrap;}
   .btn{
@@ -209,7 +218,7 @@
     display:grid; grid-template-columns: 1fr 1fr; gap:40px; align-items:end;
     margin-bottom:52px;
   }
-  .section-head h2{font-size:clamp(1.7rem,3vw,2.3rem); max-width:14ch;}
+  .section-head h2{font-size:clamp(1.7rem,2.8vw,2.15rem); line-height:1.15; max-width:22ch;}
   .section-head .sub{color:#5a5142; font-size:1.02rem; align-self:end;}
   .tag{
     font-size:0.86rem; color:var(--rust); margin-bottom:12px; display:block;
@@ -227,7 +236,7 @@
     position:relative;
   }
   .route-card-img{
-    display:block; width:calc(100% + 56px); height:180px; object-fit:cover;
+    display:block; width:calc(100% + 56px); max-width:none; height:180px; object-fit:cover;
     margin:-30px -28px 20px; border-radius:0;
   }
   .route-card:nth-child(2){margin-top:34px;}
@@ -241,11 +250,13 @@
   .route-card-custom{
     border:1px dashed #c9bb95; background:transparent;
     display:flex; flex-direction:column; justify-content:center;
+    align-self:start;
   }
   .route-card-custom .tag{
     font-size:0.86rem; color:var(--rust); margin-bottom:12px; display:block;
   }
   .route-card-custom h3{font-size:1.3rem; margin-bottom:10px;}
+  .route-card-custom .route-link{align-self:flex-start;}
   .route-stops{
     display:flex; flex-wrap:wrap; gap:6px 0; font-size:0.86rem; color:#7a705c; margin-bottom:20px;
   }
@@ -275,9 +286,9 @@
     border-top:1px solid var(--line);
   }
   .day-row{
-    display:grid; grid-template-columns: 90px 1fr 1fr;
-    gap:28px;
-    padding:30px 0;
+    display:grid; grid-template-columns: 64px minmax(0,1fr) 210px;
+    gap:32px;
+    padding:32px 0;
     border-bottom:1px solid var(--line);
     align-items:start;
   }
@@ -308,25 +319,25 @@
   }
   .price-card:hover{transform:translateY(-3px);}
   .price-card.featured{
-    border:1px solid var(--rust); position:relative;
-    transform:translateY(-14px);
-    box-shadow:0 12px 28px -18px rgba(28,20,10,0.35);
+    border:1px solid var(--rust);
+    position:relative;
+    box-shadow:0 10px 26px -20px rgba(28,20,10,0.55);
   }
-  .price-card.featured:hover{transform:translateY(-17px);}
+  .price-card.featured:hover{transform:translateY(-3px);}
   .price-card .featured-flag{
     position:absolute; top:-12px; left:26px;
-    background:var(--rust); color:#fff; font-size:0.72rem;
-    padding:4px 10px;
+    background:var(--rust); color:#fff; font-size:0.7rem;
+    letter-spacing:0.04em; padding:4px 10px;
   }
-  .price-tier{font-size:0.86rem; color:#7a705c; margin-bottom:10px;}
+  .price-tier{font-family:'Spectral',serif; font-size:1.15rem; color:var(--ink); margin-bottom:16px;}
   .price-amount{
     font-family:'Spectral', serif; font-size:2.1rem; color:var(--ink); margin-bottom:2px;
   }
   .price-amount sup{font-size:0.95rem; color:#7a705c; font-weight:400;}
   .price-unit{font-size:0.82rem; color:#7a705c; margin-bottom:18px;}
-  .price-card ul{list-style:none; font-size:0.9rem; color:#4f473a; display:grid; gap:9px; margin-bottom:8px;}
-  .price-card li{padding-left:16px; position:relative;}
-  .price-card li::before{content:"—"; position:absolute; left:0; color:var(--ochre);}
+  .price-card ul{list-style:none; font-size:0.9rem; color:#4f473a; display:grid; gap:9px; flex:1; margin-bottom:20px;}
+  .price-card li{padding-left:20px; position:relative;}
+  .price-card li::before{content:"—"; position:absolute; left:0; top:0; color:var(--ochre);}
   .price-cta{display:inline-block; margin-top:14px; font-size:0.92rem; color:var(--rust); text-decoration:none; border-bottom:1px solid var(--rust); padding-bottom:2px; transition:opacity .15s ease;}
   .price-cta:hover{opacity:0.7;}
   .price-note{font-size:0.84rem; color:#7a705c; margin-top:36px; max-width:60ch;}
@@ -342,7 +353,7 @@
   }
   .act-card:hover{background:var(--night-2); transform:translateY(-5px); box-shadow:0 16px 32px -16px rgba(0,0,0,0.55);}
   .act-card-img{
-    display:block; width:calc(100% + 52px); height:160px; object-fit:cover;
+    display:block; width:calc(100% + 52px); max-width:none; height:160px; object-fit:cover;
     margin:-30px -26px 18px;
     transition:transform .35s ease;
   }
@@ -387,13 +398,16 @@
   .review-card-quote{font-size:0.95rem; color:#3a3226; font-style:italic; margin-bottom:14px;}
   .review-card-meta{font-size:0.84rem; color:#7a705c;}
   .review-card-empty{
-    grid-column:1 / -1;
-    text-align:center; padding:44px 24px;
+    grid-column:1 / -1; justify-self:center; width:100%; max-width:600px;
+    text-align:center; padding:34px 28px;
     border:1px dashed #c9bb95; background:transparent;
   }
-  .review-card-icon{font-size:1.8rem; margin-bottom:14px; color:var(--rust);}
+  .review-card-icon{
+    width:30px; height:30px; margin:0 auto 14px;
+    stroke:var(--rust); fill:none; stroke-width:1.4;
+  }
   .review-card-empty h3{font-size:1.1rem; margin-bottom:8px;}
-  .review-card-empty p{font-size:0.94rem; color:#5a5142; max-width:44ch; margin:0 auto 18px;}
+  .review-card-empty p{font-size:0.94rem; color:#5a5142; max-width:42ch; margin:0 auto 18px;}
   .review-cta{display:inline-block; color:var(--rust); font-size:0.9rem; text-decoration:none; border-bottom:1px solid var(--rust); padding-bottom:2px; transition:opacity .15s ease;}
   .review-cta:hover{opacity:0.7;}
   .trust-badges{display:flex; flex-wrap:wrap; gap:12px; margin:22px 0 8px;}
@@ -437,16 +451,35 @@
     transition:background .15s ease, color .15s ease;
   }
   .journal-viewall-btn:hover{background:var(--rust); color:var(--cream);}
+  .journal-index{margin-top:34px; border-top:1px solid #d8c99e; border-bottom:1px solid #d8c99e;}
+  .journal-index summary{
+    display:grid; grid-template-columns:1fr auto auto; align-items:baseline; gap:14px;
+    padding:18px 0; cursor:pointer; list-style:none;
+    font-size:0.95rem; color:var(--rust);
+  }
+  .journal-index summary::-webkit-details-marker{display:none;}
+  .journal-index summary::after{content:"+"; font-size:1.15rem; line-height:1; color:var(--rust);}
+  .journal-index[open] summary::after{content:"–";}
+  .journal-index .ji-count{font-size:0.85rem; color:#7a705c;}
+  .ji-list{list-style:none; columns:3; column-gap:34px; padding:2px 0 28px;}
+  .ji-list li{
+    break-inside:avoid; display:flex; justify-content:space-between; align-items:baseline; gap:14px;
+    padding:9px 0; border-top:1px solid #eee3c8; font-size:0.9rem;
+  }
+  .ji-list a{color:var(--ink); text-decoration:none; border-bottom:1px solid transparent; transition:border-color .15s ease, color .15s ease;}
+  .ji-list a:hover{color:var(--rust); border-color:var(--rust);}
+  .ji-list span{font-size:0.76rem; color:#7a705c; white-space:nowrap;}
   .blog-card{
     border-top:2px solid var(--ochre);
     padding-top:18px;
+    display:flex; flex-direction:column;
     transition:transform .2s ease, border-color .2s ease;
   }
   .blog-card:hover{transform:translateY(-4px); border-top-color:var(--rust);}
   .blog-cat{font-size:0.78rem; color:var(--rust); margin-bottom:10px; display:block;}
   .blog-card h3{font-size:1.12rem; margin-bottom:10px; line-height:1.3;}
-  .blog-card p{font-size:0.9rem; color:#5a5142; margin-bottom:14px;}
-  .blog-link{font-size:0.86rem; color:var(--ink); text-decoration:none; border-bottom:1px solid var(--ink); padding-bottom:2px; transition:color .15s ease, border-color .15s ease;}
+  .blog-card p{font-size:0.9rem; color:#5a5142; margin-bottom:14px; flex:1;}
+  .blog-link{font-size:0.86rem; color:var(--ink); text-decoration:none; border-bottom:1px solid var(--ink); padding-bottom:2px; align-self:flex-start; transition:color .15s ease, border-color .15s ease;}
   .blog-link:hover{color:var(--rust); border-color:var(--rust);}
   .blog-link.soon{color:#a89b7c; border-bottom:1px dashed #a89b7c; cursor:default; pointer-events:none;}
 
@@ -475,6 +508,8 @@
   .inquiry-grid{
     display:grid; grid-template-columns: 0.9fr 1.1fr; gap:56px;
   }
+  .inquiry-copy{position:sticky; top:96px; align-self:start;}
+  .inquiry-copy h2{font-size:clamp(1.7rem,2.8vw,2.15rem); line-height:1.15; max-width:18ch;}
   .inquiry-note{color:#4f473a; font-size:1rem; margin-top:18px;}
   .inquiry-note strong{color:var(--rust);}
   form{display:grid; gap:16px;}
@@ -514,6 +549,14 @@
   .foot-legal a:hover{opacity:1;}
   .foot-legal .soon-note{opacity:0.55; font-size:0.76rem;}
 
+  @media (max-width:1150px){
+    .navbar{padding:16px 20px; gap:16px;}
+    .brand{font-size:1.1rem;}
+    nav ul{gap:16px; font-size:0.82rem;}
+    .navmenu{gap:14px;}
+    .navcta{padding:7px 12px; font-size:0.8rem;}
+    .lang-switch{font-size:0.76rem; padding:5px 8px;}
+  }
   @media (max-width: 860px){
     .hero-inner{grid-template-columns:1fr;}
     .hero-figures{grid-template-columns:repeat(3,1fr); display:grid; padding-bottom:36px;}
@@ -528,14 +571,23 @@
     .price-card.featured:hover{transform:none;}
     .price-route-label:not(:first-of-type){margin-top:38px;}
     .blog-grid{grid-template-columns:1fr;}
+    .ji-list{columns:1;}
     .act-grid{grid-template-columns:1fr;}
     .about-grid{grid-template-columns:1fr;}
     .testi-layout{grid-template-columns:1fr;}
     .review-grid{grid-template-columns:1fr;}
     .inquiry-grid{grid-template-columns:1fr;}
+    .inquiry-copy{position:static;}
     .row2{grid-template-columns:1fr;}
     nav ul{display:none;}
     .foot-grid{grid-template-columns:1fr;}
+  }
+  @media (max-width:560px){
+    .navbar{padding:14px 18px; gap:12px;}
+    .brand{font-size:1.04rem; gap:4px;}
+    .navmenu{gap:10px;}
+    .lang-switch{font-size:0.74rem; padding:5px 8px;}
+    .navcta{padding:7px 12px; font-size:0.78rem;}
   }
 </style>
 </head>
@@ -560,7 +612,7 @@
           <li><a href="#inquiry">Contact</a></li>
         </ul>
       </nav>
-      <a class="lang-switch" href="https://routeofthedunes.com/index-fr" style="font-size:0.82rem; opacity:0.75; text-decoration:none; border:1px solid rgba(248,243,230,0.3); border-radius:2px; padding:6px 10px;">FR</a>
+      <a class="lang-switch" href="https://routeofthedunes.com/index-fr">FR</a>
       <a class="navcta" href="#inquiry">Plan My Trip</a>
     </div>
   </div>
@@ -916,6 +968,18 @@
     </div>
     <div class="blog-grid">
       <div class="blog-card">
+        <span class="blog-cat">Experience</span>
+        <h3>What to Expect from Berber Desert Camp Hospitality</h3>
+        <p>A realistic look at Erg Chebbi desert camp hospitality, including sleeping arrangements, communal meals, campfire drumming, and cultural etiquette.</p>
+        <a class="blog-link" href="blog-traditional-berber-desert-camp-hospitality.html">Read the guide</a>
+      </div>
+      <div class="blog-card">
+        <span class="blog-cat">Planning</span>
+        <h3>Flying vs. Train: Marrakesh to Fes Logistics</h3>
+        <p>Compare comfort, speed, and baggage limits of flying versus taking the train between Marrakesh and Fes for your Morocco Sahara itinerary.</p>
+        <a class="blog-link" href="blog-flying-vs-train-marrakesh-to-fes.html">Read the guide</a>
+      </div>
+      <div class="blog-card">
         <span class="blog-cat">Planning</span>
         <h3>How Much Does a Morocco Desert Tour Actually Cost?</h3>
         <p>Budget, standard and luxury — what actually drives the price.</p>
@@ -939,361 +1003,72 @@
         <p>Red flags to check before you pay a deposit for any tour.</p>
         <a class="blog-link" href="https://routeofthedunes.com/blog-avoid-tour-scams">Read the guide</a>
       </div>
-      <div class="blog-card">
-        <span class="blog-cat">Planning</span>
-        <h3>Marrakesh vs Fes: Which to Start Your Tour From</h3>
-        <p>Both cities lead to the same dunes — how to pick based on your flights.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-marrakesh-vs-fes-start">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Planning</span>
-        <h3>Best Time of Year to Visit the Sahara</h3>
-        <p>Spring and autumn are the easy answer — here's what changes month to month.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-best-time-of-year">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Planning</span>
-        <h3>What to Pack for a Morocco Desert Tour</h3>
-        <p>A genuinely useful checklist, organized by what each item is for.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-packing-checklist">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Activities</span>
-        <h3>Camel, Quad or Buggy — and Sunrise or Sunset? How to Choose</h3>
-        <p>Two decisions, one dune crossing — how each combination actually feels and what it costs.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-camel-quad-buggy">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Planning</span>
-        <h3>Desert Tour Without Camel Riding: What Are Your Options</h3>
-        <p>For travelers who'd rather skip the camel — the 4×4 alternative into camp, and how to request it.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-no-camel-tour">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Families</span>
-        <h3>Sahara Desert Tour With Young Kids: Is It Doable?</h3>
-        <p>Heat, drive time, and pacing — an honest read on taking toddlers into the dunes.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-young-kids">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Comparison</span>
-        <h3>Erg Chebbi or Erg Chigaga: Which Desert Should You Choose</h3>
-        <p>Distance, dune height, crowds and cost — how the two compare, stop by stop.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-erg-chebbi-vs-chigaga">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Planning</span>
-        <h3>Is One Night in Merzouga Enough?</h3>
-        <p>What you gain — and miss — between a one-night and two-night stay at the dunes.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-one-night-enough">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Food</span>
-        <h3>Vegetarian and Plant-Based Meals at the Desert Camp</h3>
-        <p>What's actually on the menu, and how to flag dietary needs before you arrive.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-vegetarian-meals">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Photography</span>
-        <h3>Best Time to Photograph the Stars Over Merzouga</h3>
-        <p>New-moon dates, simple phone settings, and where to set up away from camp lights.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-photograph-stars">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Comparison</span>
-        <h3>Private vs Shared Desert Tour: Which Is Actually Worth It?</h3>
-        <p>What changes in practice — pace, privacy, and price — between the two ways to book.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-private-vs-shared">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Comparison</span>
-        <h3>3 Days vs 5 Days to Merzouga: Which Should You Book?</h3>
-        <p>What the extra two days actually add to the route, stop by stop.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-3days-vs-5days">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Culture</span>
-        <h3>What to Wear on a Desert Tour in Morocco</h3>
-        <p>Practical, respectful dress for the drive, the camp, and the dunes themselves.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-what-to-wear">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Safety</span>
-        <h3>Is a Sahara Desert Tour Safe for Solo Female Travelers?</h3>
-        <p>A direct answer, plus what to check before booking with any operator.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-solo-female-safety">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Route guide</span>
-        <h3>Ait Ben Haddou in an Hour: What to See at the Kasbah</h3>
-        <p>Getting the most from your stop at Morocco's best-known UNESCO site.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-ait-ben-haddou">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Culture</span>
-        <h3>Khamlia and Gnawa Music: An Evening Near Merzouga</h3>
-        <p>A small village near Merzouga known for its distinctive Gnawa music evenings — an optional add-on, not a fixed stop.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-khamlia-gnawa-music">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Destinations</span>
-        <h3>Chefchaouen: A Guide to Morocco's Blue City</h3>
-        <p>Blue-washed alleys in the Rif Mountains — not on our routes, but a common add-on for a longer trip.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-chefchaouen-blue-city">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Destinations</span>
-        <h3>Things to Do in Marrakech Beyond the Desert Tour</h3>
-        <p>The souks, gardens, day trips and where to base yourself before or after the dunes.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-things-to-do-marrakech">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Activities</span>
-        <h3>Sandboarding in the Sahara</h3>
-        <p>A short, easy add-on at Erg Chebbi that most travelers try once and remember.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-sandboarding">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Experience</span>
-        <h3>A Night at a Desert Camp</h3>
-        <p>Not just the sunset photo — what actually happens between dinner and sunrise.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-desert-camp-night">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Culture</span>
-        <h3>Camel Trekking in the Sahara: Is It Ethical?</h3>
-        <p>A direct answer on animal welfare, and what to ask an operator before you book.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-camel-trekking-ethics">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Travelers</span>
-        <h3>Desert Tour for Couples: Romantic Add-Ons</h3>
-        <p>What tips the standard route from a nice trip into a memorable one for two.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-desert-tour-couples">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Planning</span>
-        <h3>Camp Tiers: Is the Upgrade Worth It?</h3>
-        <p>Same dunes, same sky — what standard, deluxe and luxury actually buy you.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-camp-tier-comparison">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Planning</span>
-        <h3>Telouet &amp; Skoura Detour: Is the Driving Time Worth It?</h3>
-        <p>Adding Telouet Kasbah and Skoura Oasis to a Marrakesh desert tour adds 2-3 driving hours. Here is when to skip them and when to take the detour.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-telouet-kasbah-and-skoura-oasis-detour">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Planning</span>
-        <h3>Luxury Desert Camp vs. Edge-of-Dunes Hotel in Merzouga</h3>
-        <p>Compare staying in a deep-dune luxury desert camp versus a dune-side hotel in Merzouga. Honest trade-offs on location, comfort, and cost.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-luxury-desert-camp-vs-edge-hotel">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Planning</span>
-        <h3>Sahara Tour Travel Insurance: Evacuation &amp; Off-Road Coverage</h3>
-        <p>What travel insurance you actually need for a Morocco desert tour: medical evacuation, 4x4 off-road logistics, and local hospital reality.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-desert-tour-travel-insurance">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Planning</span>
-        <h3>Morocco Drone Laws &amp; Sahara Camera Care Guide</h3>
-        <p>What you need to know about Morocco's strict drone ban at customs, plus practical tips to protect camera lenses and phones from Erg Chebbi sand.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-drone-laws-and-camera-gear-sahara">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Planning</span>
-        <h3>Errachidia Airport Shortcut to Erg Chebbi</h3>
-        <p>Save 10+ hours of driving to the Sahara by flying into Errachidia (ERH). Here is the honest breakdown of logistics, costs, and trade-offs.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-errachidia-airport-shortcut">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Planning</span>
-        <h3>Connecting Erg Chebbi to Essaouira: A Realistic Travel Plan</h3>
-        <p>Stop rushing your Morocco trip. Here is how to break up the long drive from the Sahara to the Atlantic coast without burning out.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-connecting-erg-chebbi-to-essaouira">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Planning</span>
-        <h3>Restroom Stops Between Ouarzazate and Merzouga</h3>
-        <p>A realistic guide to toilet facilities, hygiene conditions, and practical planning along the remote desert highway stretches.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-managing-restroom-stops-ouarzazate-to-merzouga">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Planning</span>
-        <h3>Sahara in High Summer: AC Realities &amp; Heat Management</h3>
-        <p>A realistic look at traveling the Sahara desert in July and August. Learn what air conditioning works, daily schedule shifts, and heat trade-offs.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-surviving-sahara-high-summer">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Planning</span>
-        <h3>CPAP Machines &amp; Power at Erg Chebbi Desert Camps</h3>
-        <p>How desert camp power systems, voltage, generators, and battery backups handle CPAP machines and heavy electronics at Erg Chebbi.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-cpap-machines-and-heavy-electronics-sahara-camps">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Planning</span>
-        <h3>Fly Into Marrakech, Out of Fes: Open-Jaw Sahara Flight Guide</h3>
-        <p>Save 10 hours of backtracking. Why booking open-jaw flights into Marrakech and out of Fes is the smartest way to plan a Sahara desert trip.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-marrakech-in-fes-out-flights-sahara">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Planning</span>
-        <h3>Ouarzazate vs Dades Gorge: Where to Stop Night One</h3>
-        <p>Compare Ouarzazate and Dades Gorge for night one of your Sahara tour. Honest driving times, altitude differences, and Day 2 impact explained.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-ouarzazate-vs-dades-gorge-night-one">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Planning</span>
-        <h3>Cash and ATM Guide for the Marrakesh to Merzouga Drive</h3>
-        <p>Plan your cash needs for the Sahara route: reliable ATM stops, expected costs for roadside meals, tips, and crafts between Marrakesh and Merzouga.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-cash-and-atm-guide-marrakesh-to-merzouga">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Planning</span>
-        <h3>Desert Camp Bathrooms: Plumbing Realities in the Sahara</h3>
-        <p>An honest look at Sahara desert camp plumbing, water pressure, luxury vs standard bathrooms, and hygiene realities in Erg Chebbi, Merzouga.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-desert-camp-bathrooms-and-hygiene-guide">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Planning</span>
-        <h3>Sahara Sandstorms: Wind Safety &amp; Itinerary Changes</h3>
-        <p>How we handle high winds and sudden sandstorms in Erg Chebbi. Honest protocols on camp adjustments, visibility, and vehicle safety.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-erg-chebbi-sandstorms-and-wind-safety">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Planning</span>
-        <h3>Buying and Drinking Alcohol at Erg Chebbi Desert Camps</h3>
-        <p>A straightforward planning guide on how to buy, transport, and enjoy alcohol during your stay at an Erg Chebbi luxury desert camp in Merzouga.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-buying-and-drinking-alcohol-at-erg-chebbi-camps">Read the guide</a>
-      </div>
-            <div class="blog-card">
-        <span class="blog-cat">Safety</span>
-        <h3>Motion Sickness on the Tizi n'Tichka Pass: What Actually Helps</h3>
-        <p>How to handle car sickness on the Tizi n'Tichka pass between Marrakesh and Merzouga: seating, timing, medication, and when to ask the driver to stop.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-managing-motion-sickness-tichka-pass">Read the guide</a>
-      </div>
-            <div class="blog-card">
-        <span class="blog-cat">Food</span>
-        <h3>Roadside Dining and Food Safety: Marrakesh to Merzouga</h3>
-        <p>An honest guide to roadside dining between Marrakesh and Merzouga: tour stops versus local grills, water and ice, dietary needs, and a smart snack kit.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-roadside-dining-and-food-hygiene-marrakesh-to-merzouga">Read the guide</a>
-      </div>
-            <div class="blog-card">
-        <span class="blog-cat">Route guide</span>
-        <h3>Marrakech Airport to Your Riad: Taxis, Cash, and Scam Traps</h3>
-        <p>A calm, practical guide to Marrakech Menara Airport: the taxi kiosk, riad transfers, cash and SIM cards, and the medina scams to ignore.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-marrakech-airport-to-riad-arrival-guide">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Planning</span>
-        <h3>Eating in the Sahara: Dietary Needs and Food Safety</h3>
-        <p>A practical guide to managing food allergies, vegetarian diets, and food safety on remote desert routes between Marrakesh and Merzouga.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-dietary-restrictions-sahara-desert">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Planning</span>
-        <h3>Sahara Tours for Less Active Travelers: What to Expect</h3>
-        <p>A realistic look at the physical demands of long drives, camel riding, and dune walking on our Marrakesh and Fes to Erg Chebbi desert routes.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-physical-demands-sahara-desert-tour">Read the guide</a>
-      </div>
-            <div class="blog-card">
-        <span class="blog-cat">Planning</span>
-        <h3>Cash, ATMs, and Tipping on a Morocco Desert Tour</h3>
-        <p>A practical guide to cash and tipping on a Morocco desert tour: ATM reliability, daily budgets, card surcharges, and fair gratuity amounts.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-morocco-desert-tour-tipping-guide">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Planning</span>
-        <h3>Navigating Medinas with Luggage Before Your Desert Tour</h3>
-        <p>Practical advice on handling bags in Marrakech and Fes medinas before your Sahara tour pickup, including porter costs and meeting points.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-medina-luggage-pickup-guide">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Planning</span>
-        <h3>Sahara Luggage Storage: What to Bring &amp; Leave Behind</h3>
-        <p>Practical guide on what to pack in your daypack versus main bags when transferring from Marrakesh or Fes to the Erg Chebbi dunes in Merzouga.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-luggage-storage-sahara-desert-packing">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Planning</span>
-        <h3>Marrakech to Merzouga: Bus vs Guided Tour vs Self-Drive</h3>
-        <p>An honest look at costs, timings, missed sights, and trade-offs for getting from Marrakech to Erg Chebbi by public bus, guided tour, or rental car.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-marrakech-to-merzouga-bus-vs-tour-vs-self-drive">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Planning</span>
-        <h3>7 Questions to Ask Before Booking a Sahara Desert Tour</h3>
-        <p>Ask these 7 essential questions before booking a Sahara desert tour to clarify camp locations, camel welfare, food, guides, and hidden fees.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-questions-before-booking-sahara-tour">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Destinations</span>
-        <h3>Merzouga vs Zagora: Choosing the Right Sahara Trip</h3>
-        <p>An honest comparison of Erg Chebbi (Merzouga) and Zagora. Compare drive times, dune sizes, and crowds to pick the right Sahara desert trip.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-merzouga-vs-zagora-desert">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Planning</span>
-        <h3>Sunrise vs Sunset in the Sahara</h3>
-        <p>You get both on every overnight tour — what each one is actually like, and which deserves your alarm clock.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-sunrise-vs-sunset">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Planning</span>
-        <h3>Sahara Desert Tour Hidden Costs: What Your Quote Leaves Out</h3>
-        <p>A transparent breakdown of what standard Sahara desert tour quotes leave out: roadside lunches, water, local guides, quad upgrades, and tips.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-hidden-costs-sahara-desert-tour">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Planning</span>
-        <h3>Marrakesh Riad Pickup: Meeting Your Private Desert Driver</h3>
-        <p>Exact logistics for how and where your private Sahara desert driver meets you at your car-free Marrakesh medina riad. No guesswork.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-marrakesh-riad-pickup-logistics">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Planning</span>
-        <h3>Cell Service and Wi-Fi in the Sahara: What Works</h3>
-        <p>What actually works for cell coverage, Wi-Fi, and charging in Merzouga and Erg Chebbi desert camps — and what to expect off the grid.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-cell-service-wifi-sahara-desert">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Safety</span>
-        <h3>What Happens When a Desert Tour Vehicle Breaks Down?</h3>
-        <p>A realistic look at mechanical failures on remote Morocco desert roads, how reputable operators handle them, and what you should expect.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-desert-tour-vehicle-breakdowns">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Route guide</span>
-        <h3>Driving Fes to Merzouga: Passes, Checkpoints, and Fuel</h3>
-        <p>Practical safety notes for driving from Fes to Merzouga via the Middle Atlas. Pass advice, police checkpoints, and fuel planning.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-fes-to-merzouga-road-trip-safety">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Route guide</span>
-        <h3>Atlas Mountains in Winter: Tichka Pass Snow &amp; Your Itinerary</h3>
-        <p>How winter snow on the Tichka Pass impacts your Marrakesh to Merzouga desert tour. Realistic planning notes from a local operator.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-tichka-pass-winter-snow-desert-itinerary">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Comparison</span>
-        <h3>Van vs 4x4 for Sahara Desert Tours: Vehicle Comparison</h3>
-        <p>An honest comparison of AC minibuses versus Toyota 4x4s for driving from Marrakesh or Fes to Erg Chebbi. Mountain handling, comfort, and trade-offs.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-van-vs-4x4-sahara-desert-tour">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Families</span>
-        <h3>Marrakesh to Merzouga with Kids and Elderly Relatives</h3>
-        <p>Practical advice for handling long desert drives from Marrakesh with children or grandparents. Realistic stops, pacing, and trade-offs.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-marrakesh-to-merzouga-with-kids-and-elderly">Read the guide</a>
-      </div>
-      <div class="blog-card">
-        <span class="blog-cat">Families</span>
-        <h3>Sahara Desert Tours with Teens: Keeping Them Engaged</h3>
-        <p>Practical advice for traveling the Marrakesh-to-Merzouga route with teenagers, managing long drives, and balancing screen time with the desert.</p>
-        <a class="blog-link" href="https://routeofthedunes.com/blog-sahara-desert-route-with-teenagers">Read the guide</a>
-      </div>
     </div>
+    <details class="journal-index">
+      <summary><span>Browse every guide</span><span class="ji-count">65 guides</span></summary>
+      <ul class="ji-list">
+        <li><a href="https://routeofthedunes.com/blog-marrakesh-vs-fes-start">Marrakesh vs Fes: Which to Start Your Tour From</a><span>Planning</span></li>
+        <li><a href="https://routeofthedunes.com/blog-best-time-of-year">Best Time of Year to Visit the Sahara</a><span>Planning</span></li>
+        <li><a href="https://routeofthedunes.com/blog-packing-checklist">What to Pack for a Morocco Desert Tour</a><span>Planning</span></li>
+        <li><a href="https://routeofthedunes.com/blog-camel-quad-buggy">Camel, Quad or Buggy — and Sunrise or Sunset? How to Choose</a><span>Activities</span></li>
+        <li><a href="https://routeofthedunes.com/blog-no-camel-tour">Desert Tour Without Camel Riding: What Are Your Options</a><span>Planning</span></li>
+        <li><a href="https://routeofthedunes.com/blog-young-kids">Sahara Desert Tour With Young Kids: Is It Doable?</a><span>Families</span></li>
+        <li><a href="https://routeofthedunes.com/blog-erg-chebbi-vs-chigaga">Erg Chebbi or Erg Chigaga: Which Desert Should You Choose</a><span>Comparison</span></li>
+        <li><a href="https://routeofthedunes.com/blog-one-night-enough">Is One Night in Merzouga Enough?</a><span>Planning</span></li>
+        <li><a href="https://routeofthedunes.com/blog-vegetarian-meals">Vegetarian and Plant-Based Meals at the Desert Camp</a><span>Food</span></li>
+        <li><a href="https://routeofthedunes.com/blog-photograph-stars">Best Time to Photograph the Stars Over Merzouga</a><span>Photography</span></li>
+        <li><a href="https://routeofthedunes.com/blog-private-vs-shared">Private vs Shared Desert Tour: Which Is Actually Worth It?</a><span>Comparison</span></li>
+        <li><a href="https://routeofthedunes.com/blog-3days-vs-5days">3 Days vs 5 Days to Merzouga: Which Should You Book?</a><span>Comparison</span></li>
+        <li><a href="https://routeofthedunes.com/blog-what-to-wear">What to Wear on a Desert Tour in Morocco</a><span>Culture</span></li>
+        <li><a href="https://routeofthedunes.com/blog-solo-female-safety">Is a Sahara Desert Tour Safe for Solo Female Travelers?</a><span>Safety</span></li>
+        <li><a href="https://routeofthedunes.com/blog-ait-ben-haddou">Ait Ben Haddou in an Hour: What to See at the Kasbah</a><span>Route guide</span></li>
+        <li><a href="https://routeofthedunes.com/blog-khamlia-gnawa-music">Khamlia and Gnawa Music: An Evening Near Merzouga</a><span>Culture</span></li>
+        <li><a href="https://routeofthedunes.com/blog-chefchaouen-blue-city">Chefchaouen: A Guide to Morocco's Blue City</a><span>Destinations</span></li>
+        <li><a href="https://routeofthedunes.com/blog-things-to-do-marrakech">Things to Do in Marrakech Beyond the Desert Tour</a><span>Destinations</span></li>
+        <li><a href="https://routeofthedunes.com/blog-sandboarding">Sandboarding in the Sahara</a><span>Activities</span></li>
+        <li><a href="https://routeofthedunes.com/blog-desert-camp-night">A Night at a Desert Camp</a><span>Experience</span></li>
+        <li><a href="https://routeofthedunes.com/blog-camel-trekking-ethics">Camel Trekking in the Sahara: Is It Ethical?</a><span>Culture</span></li>
+        <li><a href="https://routeofthedunes.com/blog-desert-tour-couples">Desert Tour for Couples: Romantic Add-Ons</a><span>Travelers</span></li>
+        <li><a href="https://routeofthedunes.com/blog-camp-tier-comparison">Camp Tiers: Is the Upgrade Worth It?</a><span>Planning</span></li>
+        <li><a href="https://routeofthedunes.com/blog-telouet-kasbah-and-skoura-oasis-detour">Telouet &amp; Skoura Detour: Is the Driving Time Worth It?</a><span>Planning</span></li>
+        <li><a href="https://routeofthedunes.com/blog-luxury-desert-camp-vs-edge-hotel">Luxury Desert Camp vs. Edge-of-Dunes Hotel in Merzouga</a><span>Planning</span></li>
+        <li><a href="https://routeofthedunes.com/blog-desert-tour-travel-insurance">Sahara Tour Travel Insurance: Evacuation &amp; Off-Road Coverage</a><span>Planning</span></li>
+        <li><a href="https://routeofthedunes.com/blog-drone-laws-and-camera-gear-sahara">Morocco Drone Laws &amp; Sahara Camera Care Guide</a><span>Planning</span></li>
+        <li><a href="https://routeofthedunes.com/blog-errachidia-airport-shortcut">Errachidia Airport Shortcut to Erg Chebbi</a><span>Planning</span></li>
+        <li><a href="https://routeofthedunes.com/blog-connecting-erg-chebbi-to-essaouira">Connecting Erg Chebbi to Essaouira: A Realistic Travel Plan</a><span>Planning</span></li>
+        <li><a href="https://routeofthedunes.com/blog-managing-restroom-stops-ouarzazate-to-merzouga">Restroom Stops Between Ouarzazate and Merzouga</a><span>Planning</span></li>
+        <li><a href="https://routeofthedunes.com/blog-surviving-sahara-high-summer">Sahara in High Summer: AC Realities &amp; Heat Management</a><span>Planning</span></li>
+        <li><a href="https://routeofthedunes.com/blog-cpap-machines-and-heavy-electronics-sahara-camps">CPAP Machines &amp; Power at Erg Chebbi Desert Camps</a><span>Planning</span></li>
+        <li><a href="https://routeofthedunes.com/blog-marrakech-in-fes-out-flights-sahara">Fly Into Marrakech, Out of Fes: Open-Jaw Sahara Flight Guide</a><span>Planning</span></li>
+        <li><a href="https://routeofthedunes.com/blog-ouarzazate-vs-dades-gorge-night-one">Ouarzazate vs Dades Gorge: Where to Stop Night One</a><span>Planning</span></li>
+        <li><a href="https://routeofthedunes.com/blog-cash-and-atm-guide-marrakesh-to-merzouga">Cash and ATM Guide for the Marrakesh to Merzouga Drive</a><span>Planning</span></li>
+        <li><a href="https://routeofthedunes.com/blog-desert-camp-bathrooms-and-hygiene-guide">Desert Camp Bathrooms: Plumbing Realities in the Sahara</a><span>Planning</span></li>
+        <li><a href="https://routeofthedunes.com/blog-erg-chebbi-sandstorms-and-wind-safety">Sahara Sandstorms: Wind Safety &amp; Itinerary Changes</a><span>Planning</span></li>
+        <li><a href="https://routeofthedunes.com/blog-buying-and-drinking-alcohol-at-erg-chebbi-camps">Buying and Drinking Alcohol at Erg Chebbi Desert Camps</a><span>Planning</span></li>
+        <li><a href="https://routeofthedunes.com/blog-managing-motion-sickness-tichka-pass">Motion Sickness on the Tizi n'Tichka Pass: What Actually Helps</a><span>Safety</span></li>
+        <li><a href="https://routeofthedunes.com/blog-roadside-dining-and-food-hygiene-marrakesh-to-merzouga">Roadside Dining and Food Safety: Marrakesh to Merzouga</a><span>Food</span></li>
+        <li><a href="https://routeofthedunes.com/blog-marrakech-airport-to-riad-arrival-guide">Marrakech Airport to Your Riad: Taxis, Cash, and Scam Traps</a><span>Route guide</span></li>
+        <li><a href="https://routeofthedunes.com/blog-dietary-restrictions-sahara-desert">Eating in the Sahara: Dietary Needs and Food Safety</a><span>Planning</span></li>
+        <li><a href="https://routeofthedunes.com/blog-physical-demands-sahara-desert-tour">Sahara Tours for Less Active Travelers: What to Expect</a><span>Planning</span></li>
+        <li><a href="https://routeofthedunes.com/blog-morocco-desert-tour-tipping-guide">Cash, ATMs, and Tipping on a Morocco Desert Tour</a><span>Planning</span></li>
+        <li><a href="https://routeofthedunes.com/blog-medina-luggage-pickup-guide">Navigating Medinas with Luggage Before Your Desert Tour</a><span>Planning</span></li>
+        <li><a href="https://routeofthedunes.com/blog-luggage-storage-sahara-desert-packing">Sahara Luggage Storage: What to Bring &amp; Leave Behind</a><span>Planning</span></li>
+        <li><a href="https://routeofthedunes.com/blog-marrakech-to-merzouga-bus-vs-tour-vs-self-drive">Marrakech to Merzouga: Bus vs Guided Tour vs Self-Drive</a><span>Planning</span></li>
+        <li><a href="https://routeofthedunes.com/blog-questions-before-booking-sahara-tour">7 Questions to Ask Before Booking a Sahara Desert Tour</a><span>Planning</span></li>
+        <li><a href="https://routeofthedunes.com/blog-merzouga-vs-zagora-desert">Merzouga vs Zagora: Choosing the Right Sahara Trip</a><span>Destinations</span></li>
+        <li><a href="https://routeofthedunes.com/blog-sunrise-vs-sunset">Sunrise vs Sunset in the Sahara</a><span>Planning</span></li>
+        <li><a href="https://routeofthedunes.com/blog-hidden-costs-sahara-desert-tour">Sahara Desert Tour Hidden Costs: What Your Quote Leaves Out</a><span>Planning</span></li>
+        <li><a href="https://routeofthedunes.com/blog-marrakesh-riad-pickup-logistics">Marrakesh Riad Pickup: Meeting Your Private Desert Driver</a><span>Planning</span></li>
+        <li><a href="https://routeofthedunes.com/blog-cell-service-wifi-sahara-desert">Cell Service and Wi-Fi in the Sahara: What Works</a><span>Planning</span></li>
+        <li><a href="https://routeofthedunes.com/blog-desert-tour-vehicle-breakdowns">What Happens When a Desert Tour Vehicle Breaks Down?</a><span>Safety</span></li>
+        <li><a href="https://routeofthedunes.com/blog-fes-to-merzouga-road-trip-safety">Driving Fes to Merzouga: Passes, Checkpoints, and Fuel</a><span>Route guide</span></li>
+        <li><a href="https://routeofthedunes.com/blog-tichka-pass-winter-snow-desert-itinerary">Atlas Mountains in Winter: Tichka Pass Snow &amp; Your Itinerary</a><span>Route guide</span></li>
+        <li><a href="https://routeofthedunes.com/blog-van-vs-4x4-sahara-desert-tour">Van vs 4x4 for Sahara Desert Tours: Vehicle Comparison</a><span>Comparison</span></li>
+        <li><a href="https://routeofthedunes.com/blog-marrakesh-to-merzouga-with-kids-and-elderly">Marrakesh to Merzouga with Kids and Elderly Relatives</a><span>Families</span></li>
+        <li><a href="https://routeofthedunes.com/blog-sahara-desert-route-with-teenagers">Sahara Desert Tours with Teens: Keeping Them Engaged</a><span>Families</span></li>
+      </ul>
+    </details>
+
     <div class="journal-viewall">
       <a class="journal-viewall-btn" href="https://routeofthedunes.com/journal">View all guides →</a>
     </div>
@@ -1310,26 +1085,28 @@
       <p class="sub">Four things worth knowing before you book.</p>
     </div>
   </div>
-  <div class="exp-grid">
-    <div class="exp-card">
-      <svg class="glyph" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3"/><path d="M4 21c0-4 3.5-7 8-7s8 3 8 7"/></svg>
-      <h4>Local guides</h4>
-      <p>Drivers and guides from the towns you're passing through, not a call center.</p>
-    </div>
-    <div class="exp-card">
-      <svg class="glyph" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="1"/><path d="M8 7V4h8v3"/></svg>
-      <h4>Shared or private</h4>
-      <p>Join a small group to keep costs down, or book a private vehicle for full flexibility.</p>
-    </div>
-    <div class="exp-card">
-      <svg class="glyph" viewBox="0 0 24 24"><path d="M12 3v6l4 2"/><circle cx="12" cy="12" r="9"/></svg>
-      <h4>Flexible dates</h4>
-      <p>Routes start any day of the week and can extend or shorten by request.</p>
-    </div>
-    <div class="exp-card">
-      <svg class="glyph" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
-      <h4>Standard, deluxe or luxury</h4>
-      <p>Same route, three camp tiers — luxury tents come with a private bathroom and hot shower.</p>
+  <div class="wrap">
+    <div class="exp-grid">
+      <div class="exp-card">
+        <svg class="glyph" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3"/><path d="M4 21c0-4 3.5-7 8-7s8 3 8 7"/></svg>
+        <h4>Local guides</h4>
+        <p>Drivers and guides from the towns you're passing through, not a call center.</p>
+      </div>
+      <div class="exp-card">
+        <svg class="glyph" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="1"/><path d="M8 7V4h8v3"/></svg>
+        <h4>Shared or private</h4>
+        <p>Join a small group to keep costs down, or book a private vehicle for full flexibility.</p>
+      </div>
+      <div class="exp-card">
+        <svg class="glyph" viewBox="0 0 24 24"><path d="M12 3v6l4 2"/><circle cx="12" cy="12" r="9"/></svg>
+        <h4>Flexible dates</h4>
+        <p>Routes start any day of the week and can extend or shorten by request.</p>
+      </div>
+      <div class="exp-card">
+        <svg class="glyph" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        <h4>Standard, deluxe or luxury</h4>
+        <p>Same route, three camp tiers — luxury tents come with a private bathroom and hot shower.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -1403,7 +1180,7 @@
     -->
     <div class="review-grid">
       <div class="review-card review-card-empty">
-        <div class="review-card-icon">💬</div>
+        <svg class="review-card-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5c0 4.1-4 7.5-9 7.5a10 10 0 0 1-2.6-.34L4 21l1.3-3.6A6.9 6.9 0 0 1 3 11.5C3 7.4 7 4 12 4s9 3.4 9 7.5Z"/></svg>
         <h3>Be one of our first reviewed trips</h3>
         <p>Message us on WhatsApp after your tour and we'll feature your review here, with your name and the route you took.</p>
         <a class="review-cta" href="https://wa.me/212639602183" target="_blank">Message us on WhatsApp</a>
@@ -1450,7 +1227,7 @@
 <section class="section inquiry" id="inquiry">
   <div class="wrap">
     <div class="inquiry-grid">
-      <div>
+      <div class="inquiry-copy">
         <span class="tag">Get in touch</span>
         <h2>Tell us your dates, we'll shape the route.</h2>
         <p class="inquiry-note">Every trip is quoted after a short exchange — send the form and expect a reply with <strong>timing and a price range</strong> within a day.</p>
