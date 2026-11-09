@@ -123,3 +123,4 @@
 /terms/ /terms 301
 /tools/embed/packing-checklist/ /tools/embed/packing-checklist 301
 /tools/sahara-packing-checklist/ /tools/sahara-packing-checklist 301
+/blog/* /blog-:splat 301
